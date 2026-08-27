@@ -1,0 +1,3 @@
+# Profitability
+
+Research placeholder.
