@@ -145,6 +145,7 @@ def main() -> None:
                     "name": english(row.get("name", {})),
                     "basePrice": row.get("basePrice", 0),
                     "capacity": row.get("capacity", 0),
+                    "volume": row.get("volume", 0),
                 }
 
         dogma_by_type = {}
@@ -205,6 +206,7 @@ def main() -> None:
             "typeId": type_id,
             "tier": tier(type_id),
             "name": name,
+            "volume": type_details[type_id].get("volume", 0),
             "planets": possible_planets,
             "inputs": [type_names.get(item["typeId"], f"Type {item['typeId']}") for item in recipe["inputs"]] if recipe else [],
             "inputItems": recipe["inputs"] if recipe else [],
@@ -273,7 +275,7 @@ def main() -> None:
         })
 
     metadata = {
-        "version": "0.7.0",
+        "version": "0.8.0",
         "source": "CCP EVE Online Static Data Export (JSONL)",
         "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
         "sdeBuild": str(args.build),
@@ -293,6 +295,7 @@ def main() -> None:
         "notes": [
             "System, region, security, planet, stargate, item and schematic records come from CCP's SDE.",
             "Individual planet IDs, orbital indices and radii support the colony layout distance model.",
+            "PI commodity volumes support cargo and hauling calculations.",
             "Command-center outputs and planetary structure CPU, powergrid, capacity and base-price records come from CCP typeDogma and type data.",
             "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
             "Named restrictions and shattered-system IDs are explicit and data-driven.",

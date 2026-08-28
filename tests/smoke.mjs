@@ -14,7 +14,7 @@ globalThis.document={
 vm.runInThisContext(fs.readFileSync(new URL("../web/data/pi-data.js",import.meta.url),"utf8"));
 vm.runInThisContext(fs.readFileSync(new URL("../web/app.js",import.meta.url),"utf8"));
 
-assert.equal(piData.metadata.version,"0.7.0");
+assert.equal(piData.metadata.version,"0.8.0");
 assert.equal(piData.metadata.counts.systems,8490);
 assert.equal(matchingSystems("Atlan")[0],"Atlangeins");
 assert.equal(getSystem("Jita").restricted,true);
@@ -22,6 +22,8 @@ assert.equal(getSystem("Sobaseki").planetTotal,13);
 assert.equal(getSystem("Sobaseki").planetInstances.length,13);
 assert.ok(getSystem("Sobaseki").planetInstances.every(planet=>planet.id&&planet.radius>0));
 assert.equal(distanceBetween("Jita","Perimeter"),1);
+assert.deepEqual(routeBetween("Jita","Perimeter").map(system=>system.name),["Jita","Perimeter"]);
+assert.equal(routeBetween("Jita","Thera").length,0);
 assert.match(pageContent.innerHTML,/CCP SDE/);
 
 state.page="productionHelp";
@@ -30,6 +32,7 @@ assert.match(pageContent.innerHTML,/What Can I Make Here/);
 assert.match(pageContent.innerHTML,/CREATE RECOMMENDED PLAN/);
 
 const product=productById.get("mechanical-parts");
+assert.ok(product.volume>0);
 const candidate=nearbySystems("Jita",5,true).find(system=>coverage(system,product).complete);
 assert.ok(candidate,"Mechanical Parts should have a complete nearby candidate");
 makeRecommendedPlan(candidate.name,product.id);
@@ -73,6 +76,23 @@ assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 assert.match(pageContent.innerHTML,/BEGINNER BUILD ORDER/);
 assert.match(pageContent.innerHTML,/OPERATION-WIDE PRODUCTION BALANCE/);
 
+const logistics=logisticsModel();
+assert.ok(logistics.finalUnits>0);
+assert.ok(logistics.totalVolume>0);
+assert.ok(logistics.totalTax>0);
+assert.ok(logistics.movements.some(row=>row.kind==="FINAL EXPORT"));
+assert.ok(logistics.movements.some(row=>row.kind==="FACTORY TRANSFER"));
+assert.equal(logistics.path[0].name,candidate.name);
+assert.equal(logistics.path.at(-1).name,"Jita");
+
+state.page="logistics";
+render();
+assert.match(pageContent.innerHTML,/Logistics & POCO Planner/);
+assert.match(pageContent.innerHTML,/CARGO & CUSTOMS MOVEMENTS/);
+assert.match(pageContent.innerHTML,/STATIC GATE ROUTE/);
+assert.match(pageContent.innerHTML,/PUBLIC ESI ROUTE CHECK/);
+assert.match(pageContent.innerHTML,/COLLECTION CHECKLIST/);
+
 for(const tier of [1,2,3,4]){
   let representative=null;
   for(const tierProduct of piData.products.filter(item=>item.tier===tier)){
@@ -83,11 +103,15 @@ for(const tier of [1,2,3,4]){
   makeRecommendedPlan(representative.system.name,representative.tierProduct.id);
   const planets=fittingSelected();
   assert.ok(planets.length>0,`P${tier} plan should select planets`);
+  assert.ok(representative.tierProduct.volume>0,`P${tier} product should have SDE volume`);
   const first=planets[0],firstRole=state.colony.roles[first.id];
   assert.ok(layoutMetrics(first,firstRole,representative.tierProduct).links.length>0);
+  const tierLogistics=logisticsModel();
+  assert.ok(tierLogistics.totalVolume>0,`P${tier} should create cargo volume`);
+  assert.equal(tierLogistics.movements.length,tier===1?1:1+representative.tierProduct.inputItems.length);
   state.page="layout";
   render();
   assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 }
 
-console.log("v0.7 smoke checks passed");
+console.log("v0.8 smoke checks passed");

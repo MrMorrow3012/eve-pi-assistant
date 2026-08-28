@@ -7,7 +7,7 @@ window.EVE_ESI = (()=>{
   const headers={
     "Accept":"application/json",
     "X-Compatibility-Date":compatibilityDate,
-    "X-User-Agent":"EVE-PI-Assistant/0.7 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
+    "X-User-Agent":"EVE-PI-Assistant/0.8 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
   };
 
   async function request(path,options={}){

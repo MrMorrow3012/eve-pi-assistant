@@ -4,6 +4,7 @@
     "typeId": 2268,
     "tier": 0,
     "name": "Aqueous Liquids",
+    "volume": 0.005,
     "planets": [
       "barren",
       "gas",
@@ -26,6 +27,7 @@
     "typeId": 2305,
     "tier": 0,
     "name": "Autotrophs",
+    "volume": 0.005,
     "planets": [
       "temperate"
     ],
@@ -43,6 +45,7 @@
     "typeId": 2267,
     "tier": 0,
     "name": "Base Metals",
+    "volume": 0.005,
     "planets": [
       "barren",
       "gas",
@@ -64,6 +67,7 @@
     "typeId": 2288,
     "tier": 0,
     "name": "Carbon Compounds",
+    "volume": 0.005,
     "planets": [
       "barren",
       "oceanic",
@@ -83,6 +87,7 @@
     "typeId": 2287,
     "tier": 0,
     "name": "Complex Organisms",
+    "volume": 0.005,
     "planets": [
       "oceanic",
       "temperate"
@@ -101,6 +106,7 @@
     "typeId": 2307,
     "tier": 0,
     "name": "Felsic Magma",
+    "volume": 0.005,
     "planets": [
       "lava"
     ],
@@ -118,6 +124,7 @@
     "typeId": 2272,
     "tier": 0,
     "name": "Heavy Metals",
+    "volume": 0.005,
     "planets": [
       "ice",
       "lava",
@@ -137,6 +144,7 @@
     "typeId": 2309,
     "tier": 0,
     "name": "Ionic Solutions",
+    "volume": 0.005,
     "planets": [
       "gas",
       "storm"
@@ -155,6 +163,7 @@
     "typeId": 2073,
     "tier": 0,
     "name": "Microorganisms",
+    "volume": 0.005,
     "planets": [],
     "inputs": [],
     "inputItems": [],
@@ -170,6 +179,7 @@
     "typeId": 2310,
     "tier": 0,
     "name": "Noble Gas",
+    "volume": 0.005,
     "planets": [
       "gas",
       "ice",
@@ -189,6 +199,7 @@
     "typeId": 2270,
     "tier": 0,
     "name": "Noble Metals",
+    "volume": 0.005,
     "planets": [
       "barren",
       "plasma"
@@ -207,6 +218,7 @@
     "typeId": 2306,
     "tier": 0,
     "name": "Non-CS Crystals",
+    "volume": 0.005,
     "planets": [
       "lava",
       "plasma"
@@ -225,6 +237,7 @@
     "typeId": 2286,
     "tier": 0,
     "name": "Planktic Colonies",
+    "volume": 0.005,
     "planets": [
       "ice",
       "oceanic"
@@ -243,6 +256,7 @@
     "typeId": 2311,
     "tier": 0,
     "name": "Reactive Gas",
+    "volume": 0.005,
     "planets": [
       "gas"
     ],
@@ -260,6 +274,7 @@
     "typeId": 2308,
     "tier": 0,
     "name": "Suspended Plasma",
+    "volume": 0.005,
     "planets": [
       "lava",
       "plasma",
@@ -279,6 +294,7 @@
     "typeId": 2393,
     "tier": 1,
     "name": "Bacteria",
+    "volume": 0.19,
     "planets": [],
     "inputs": [
       "Microorganisms"
@@ -301,6 +317,7 @@
     "typeId": 2396,
     "tier": 1,
     "name": "Biofuels",
+    "volume": 0.19,
     "planets": [
       "barren",
       "oceanic",
@@ -327,6 +344,7 @@
     "typeId": 3779,
     "tier": 1,
     "name": "Biomass",
+    "volume": 0.19,
     "planets": [
       "ice",
       "oceanic"
@@ -352,6 +370,7 @@
     "typeId": 2401,
     "tier": 1,
     "name": "Chiral Structures",
+    "volume": 0.19,
     "planets": [
       "lava",
       "plasma"
@@ -377,6 +396,7 @@
     "typeId": 2390,
     "tier": 1,
     "name": "Electrolytes",
+    "volume": 0.19,
     "planets": [
       "gas",
       "storm"
@@ -402,6 +422,7 @@
     "typeId": 2397,
     "tier": 1,
     "name": "Industrial Fibers",
+    "volume": 0.19,
     "planets": [
       "temperate"
     ],
@@ -426,6 +447,7 @@
     "typeId": 2392,
     "tier": 1,
     "name": "Oxidizing Compound",
+    "volume": 0.19,
     "planets": [
       "gas"
     ],
@@ -450,6 +472,7 @@
     "typeId": 3683,
     "tier": 1,
     "name": "Oxygen",
+    "volume": 0.19,
     "planets": [
       "gas",
       "ice",
@@ -476,6 +499,7 @@
     "typeId": 2389,
     "tier": 1,
     "name": "Plasmoids",
+    "volume": 0.19,
     "planets": [
       "lava",
       "plasma",
@@ -502,6 +526,7 @@
     "typeId": 2399,
     "tier": 1,
     "name": "Precious Metals",
+    "volume": 0.19,
     "planets": [
       "barren",
       "plasma"
@@ -527,6 +552,7 @@
     "typeId": 2395,
     "tier": 1,
     "name": "Proteins",
+    "volume": 0.19,
     "planets": [
       "oceanic",
       "temperate"
@@ -552,6 +578,7 @@
     "typeId": 2398,
     "tier": 1,
     "name": "Reactive Metals",
+    "volume": 0.19,
     "planets": [
       "barren",
       "gas",
@@ -580,6 +607,7 @@
     "typeId": 9828,
     "tier": 1,
     "name": "Silicon",
+    "volume": 0.19,
     "planets": [
       "lava"
     ],
@@ -604,6 +632,7 @@
     "typeId": 2400,
     "tier": 1,
     "name": "Toxic Metals",
+    "volume": 0.19,
     "planets": [
       "ice",
       "lava",
@@ -630,6 +659,7 @@
     "typeId": 3645,
     "tier": 1,
     "name": "Water",
+    "volume": 0.19,
     "planets": [
       "barren",
       "gas",
@@ -659,6 +689,7 @@
     "typeId": 2329,
     "tier": 2,
     "name": "Biocells",
+    "volume": 0.75,
     "planets": [
       "barren"
     ],
@@ -689,6 +720,7 @@
     "typeId": 3828,
     "tier": 2,
     "name": "Construction Blocks",
+    "volume": 0.75,
     "planets": [
       "lava",
       "plasma"
@@ -720,6 +752,7 @@
     "typeId": 9836,
     "tier": 2,
     "name": "Consumer Electronics",
+    "volume": 0.75,
     "planets": [
       "lava",
       "plasma"
@@ -751,6 +784,7 @@
     "typeId": 9832,
     "tier": 2,
     "name": "Coolant",
+    "volume": 0.75,
     "planets": [
       "gas",
       "storm"
@@ -782,6 +816,7 @@
     "typeId": 44,
     "tier": 2,
     "name": "Enriched Uranium",
+    "volume": 0.75,
     "planets": [
       "plasma"
     ],
@@ -812,6 +847,7 @@
     "typeId": 3693,
     "tier": 2,
     "name": "Fertilizer",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Bacteria",
@@ -840,6 +876,7 @@
     "typeId": 15317,
     "tier": 2,
     "name": "Genetically Enhanced Livestock",
+    "volume": 0.75,
     "planets": [
       "oceanic"
     ],
@@ -870,6 +907,7 @@
     "typeId": 3725,
     "tier": 2,
     "name": "Livestock",
+    "volume": 0.75,
     "planets": [
       "oceanic",
       "temperate"
@@ -901,6 +939,7 @@
     "typeId": 3689,
     "tier": 2,
     "name": "Mechanical Parts",
+    "volume": 0.75,
     "planets": [
       "barren",
       "plasma"
@@ -932,6 +971,7 @@
     "typeId": 2327,
     "tier": 2,
     "name": "Microfiber Shielding",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Industrial Fibers",
@@ -960,6 +1000,7 @@
     "typeId": 9842,
     "tier": 2,
     "name": "Miniature Electronics",
+    "volume": 0.75,
     "planets": [
       "lava"
     ],
@@ -990,6 +1031,7 @@
     "typeId": 2463,
     "tier": 2,
     "name": "Nanites",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Bacteria",
@@ -1018,6 +1060,7 @@
     "typeId": 2317,
     "tier": 2,
     "name": "Oxides",
+    "volume": 0.75,
     "planets": [
       "gas"
     ],
@@ -1048,6 +1091,7 @@
     "typeId": 2321,
     "tier": 2,
     "name": "Polyaramids",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Oxidizing Compound",
@@ -1076,6 +1120,7 @@
     "typeId": 3695,
     "tier": 2,
     "name": "Polytextiles",
+    "volume": 0.75,
     "planets": [
       "temperate"
     ],
@@ -1106,6 +1151,7 @@
     "typeId": 9830,
     "tier": 2,
     "name": "Rocket Fuel",
+    "volume": 0.75,
     "planets": [
       "storm"
     ],
@@ -1136,6 +1182,7 @@
     "typeId": 3697,
     "tier": 2,
     "name": "Silicate Glass",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Oxidizing Compound",
@@ -1164,6 +1211,7 @@
     "typeId": 9838,
     "tier": 2,
     "name": "Superconductors",
+    "volume": 0.75,
     "planets": [
       "storm"
     ],
@@ -1194,6 +1242,7 @@
     "typeId": 2312,
     "tier": 2,
     "name": "Supertensile Plastics",
+    "volume": 0.75,
     "planets": [
       "ice"
     ],
@@ -1224,6 +1273,7 @@
     "typeId": 3691,
     "tier": 2,
     "name": "Synthetic Oil",
+    "volume": 0.75,
     "planets": [
       "gas",
       "storm"
@@ -1255,6 +1305,7 @@
     "typeId": 2319,
     "tier": 2,
     "name": "Test Cultures",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Bacteria",
@@ -1283,6 +1334,7 @@
     "typeId": 9840,
     "tier": 2,
     "name": "Transmitter",
+    "volume": 0.75,
     "planets": [
       "lava",
       "plasma"
@@ -1314,6 +1366,7 @@
     "typeId": 3775,
     "tier": 2,
     "name": "Viral Agent",
+    "volume": 0.75,
     "planets": [],
     "inputs": [
       "Bacteria",
@@ -1342,6 +1395,7 @@
     "typeId": 2328,
     "tier": 2,
     "name": "Water-Cooled CPU",
+    "volume": 0.75,
     "planets": [
       "barren",
       "gas",
@@ -1374,6 +1428,7 @@
     "typeId": 2358,
     "tier": 3,
     "name": "Biotech Research Reports",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Nanites",
@@ -1410,6 +1465,7 @@
     "typeId": 2345,
     "tier": 3,
     "name": "Camera Drones",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Silicate Glass",
@@ -1440,6 +1496,7 @@
     "typeId": 2344,
     "tier": 3,
     "name": "Condensates",
+    "volume": 3.0,
     "planets": [
       "gas"
     ],
@@ -1472,6 +1529,7 @@
     "typeId": 2367,
     "tier": 3,
     "name": "Cryoprotectant Solution",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Test Cultures",
@@ -1508,6 +1566,7 @@
     "typeId": 17392,
     "tier": 3,
     "name": "Data Chips",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Supertensile Plastics",
@@ -1538,6 +1597,7 @@
     "typeId": 2348,
     "tier": 3,
     "name": "Gel-Matrix Biopaste",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Oxides",
@@ -1575,6 +1635,7 @@
     "typeId": 9834,
     "tier": 3,
     "name": "Guidance Systems",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Water-Cooled CPU",
@@ -1605,6 +1666,7 @@
     "typeId": 2366,
     "tier": 3,
     "name": "Hazmat Detection Systems",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Polytextiles",
@@ -1642,6 +1704,7 @@
     "typeId": 2361,
     "tier": 3,
     "name": "Hermetic Membranes",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Polyaramids",
@@ -1672,6 +1735,7 @@
     "typeId": 17898,
     "tier": 3,
     "name": "High-Tech Transmitters",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Polyaramids",
@@ -1702,6 +1766,7 @@
     "typeId": 2360,
     "tier": 3,
     "name": "Industrial Explosives",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Fertilizer",
@@ -1732,6 +1797,7 @@
     "typeId": 2354,
     "tier": 3,
     "name": "Neocoms",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Biocells",
@@ -1762,6 +1828,7 @@
     "typeId": 2352,
     "tier": 3,
     "name": "Nuclear Reactors",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Enriched Uranium",
@@ -1792,6 +1859,7 @@
     "typeId": 9846,
     "tier": 3,
     "name": "Planetary Vehicles",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Supertensile Plastics",
@@ -1829,6 +1897,7 @@
     "typeId": 9848,
     "tier": 3,
     "name": "Robotics",
+    "volume": 3.0,
     "planets": [
       "plasma"
     ],
@@ -1861,6 +1930,7 @@
     "typeId": 2351,
     "tier": 3,
     "name": "Smartfab Units",
+    "volume": 3.0,
     "planets": [
       "lava"
     ],
@@ -1893,6 +1963,7 @@
     "typeId": 2349,
     "tier": 3,
     "name": "Supercomputers",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Water-Cooled CPU",
@@ -1929,6 +2000,7 @@
     "typeId": 2346,
     "tier": 3,
     "name": "Synthetic Synapses",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Supertensile Plastics",
@@ -1959,6 +2031,7 @@
     "typeId": 12836,
     "tier": 3,
     "name": "Transcranial Microcontrollers",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Biocells",
@@ -1989,6 +2062,7 @@
     "typeId": 17136,
     "tier": 3,
     "name": "Ukomi Superconductors",
+    "volume": 3.0,
     "planets": [
       "storm"
     ],
@@ -2021,6 +2095,7 @@
     "typeId": 28974,
     "tier": 3,
     "name": "Vaccines",
+    "volume": 3.0,
     "planets": [],
     "inputs": [
       "Livestock",
@@ -2051,6 +2126,7 @@
     "typeId": 2867,
     "tier": 4,
     "name": "Broadcast Node",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Neocoms",
@@ -2091,6 +2167,7 @@
     "typeId": 2868,
     "tier": 4,
     "name": "Integrity Response Drones",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Gel-Matrix Biopaste",
@@ -2134,6 +2211,7 @@
     "typeId": 2869,
     "tier": 4,
     "name": "Nano-Factory",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Industrial Explosives",
@@ -2174,6 +2252,7 @@
     "typeId": 2870,
     "tier": 4,
     "name": "Organic Mortar Applicators",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Condensates",
@@ -2214,6 +2293,7 @@
     "typeId": 2871,
     "tier": 4,
     "name": "Recursive Computing Module",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Synthetic Synapses",
@@ -2254,6 +2334,7 @@
     "typeId": 2872,
     "tier": 4,
     "name": "Self-Harmonizing Power Core",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Camera Drones",
@@ -2294,6 +2375,7 @@
     "typeId": 2875,
     "tier": 4,
     "name": "Sterile Conduits",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Smartfab Units",
@@ -2334,6 +2416,7 @@
     "typeId": 2876,
     "tier": 4,
     "name": "Wetware Mainframe",
+    "volume": 50.0,
     "planets": [],
     "inputs": [
       "Supercomputers",

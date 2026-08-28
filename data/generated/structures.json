@@ -58,6 +58,7 @@
       "name": "Barren Extractor Control Unit",
       "basePrice": 45000.0,
       "capacity": 0,
+      "volume": 0,
       "power": 2600,
       "cpu": 400,
       "headPower": 550,
@@ -68,6 +69,7 @@
       "name": "Barren Basic Industry Facility",
       "basePrice": 75000.0,
       "capacity": 0,
+      "volume": 0,
       "power": 800,
       "cpu": 200
     },
@@ -76,6 +78,7 @@
       "name": "Barren Advanced Industry Facility",
       "basePrice": 250000.0,
       "capacity": 0,
+      "volume": 0,
       "power": 700,
       "cpu": 500
     },
@@ -84,6 +87,7 @@
       "name": "Barren High-Tech Production Plant",
       "basePrice": 525000.0,
       "capacity": 0,
+      "volume": 0,
       "power": 400,
       "cpu": 1100
     },
@@ -92,6 +96,7 @@
       "name": "Barren Launchpad",
       "basePrice": 900000.0,
       "capacity": 10000.0,
+      "volume": 0,
       "power": 700,
       "cpu": 3600
     },
@@ -100,6 +105,7 @@
       "name": "Barren Storage Facility",
       "basePrice": 250000.0,
       "capacity": 12000.0,
+      "volume": 0,
       "power": 700,
       "cpu": 500
     }
