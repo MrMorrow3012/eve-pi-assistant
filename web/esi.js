@@ -1,5 +1,5 @@
-/* Public ESI adapter. The prototype does not call ESI until generated records
- * contain real CCP IDs. Character-private PI endpoints belong behind EVE SSO. */
+/* Optional public ESI adapter. Core planning uses generated SDE records so the
+ * site remains fast and useful offline. No character-private endpoints. */
 window.EVE_ESI = (()=>{
   const baseUrl="https://esi.evetech.net";
   const compatibilityDate="2026-08-28";
@@ -7,7 +7,7 @@ window.EVE_ESI = (()=>{
   const headers={
     "Accept":"application/json",
     "X-Compatibility-Date":compatibilityDate,
-    "X-User-Agent":"EVE-PI-Assistant/0.2 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
+    "X-User-Agent":"EVE-PI-Assistant/0.5 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
   };
 
   async function request(path,options={}){

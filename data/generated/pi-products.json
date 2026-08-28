@@ -1,0 +1,2372 @@
+[
+  {
+    "id": "aqueous-liquids",
+    "typeId": 2268,
+    "tier": 0,
+    "name": "Aqueous Liquids",
+    "planets": [
+      "barren",
+      "gas",
+      "ice",
+      "oceanic",
+      "storm",
+      "temperate"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Aqueous Liquids"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "autotrophs",
+    "typeId": 2305,
+    "tier": 0,
+    "name": "Autotrophs",
+    "planets": [
+      "temperate"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Autotrophs"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "base-metals",
+    "typeId": 2267,
+    "tier": 0,
+    "name": "Base Metals",
+    "planets": [
+      "barren",
+      "gas",
+      "lava",
+      "plasma",
+      "storm"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Base Metals"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "carbon-compounds",
+    "typeId": 2288,
+    "tier": 0,
+    "name": "Carbon Compounds",
+    "planets": [
+      "barren",
+      "oceanic",
+      "temperate"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Carbon Compounds"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "complex-organisms",
+    "typeId": 2287,
+    "tier": 0,
+    "name": "Complex Organisms",
+    "planets": [
+      "oceanic",
+      "temperate"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Complex Organisms"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "felsic-magma",
+    "typeId": 2307,
+    "tier": 0,
+    "name": "Felsic Magma",
+    "planets": [
+      "lava"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Felsic Magma"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "heavy-metals",
+    "typeId": 2272,
+    "tier": 0,
+    "name": "Heavy Metals",
+    "planets": [
+      "ice",
+      "lava",
+      "plasma"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Heavy Metals"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "ionic-solutions",
+    "typeId": 2309,
+    "tier": 0,
+    "name": "Ionic Solutions",
+    "planets": [
+      "gas",
+      "storm"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Ionic Solutions"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "microorganisms",
+    "typeId": 2073,
+    "tier": 0,
+    "name": "Microorganisms",
+    "planets": [],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Microorganisms"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "noble-gas",
+    "typeId": 2310,
+    "tier": 0,
+    "name": "Noble Gas",
+    "planets": [
+      "gas",
+      "ice",
+      "storm"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Noble Gas"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "noble-metals",
+    "typeId": 2270,
+    "tier": 0,
+    "name": "Noble Metals",
+    "planets": [
+      "barren",
+      "plasma"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Noble Metals"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "non-cs-crystals",
+    "typeId": 2306,
+    "tier": 0,
+    "name": "Non-CS Crystals",
+    "planets": [
+      "lava",
+      "plasma"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "planktic-colonies",
+    "typeId": 2286,
+    "tier": 0,
+    "name": "Planktic Colonies",
+    "planets": [
+      "ice",
+      "oceanic"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Planktic Colonies"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "reactive-gas",
+    "typeId": 2311,
+    "tier": 0,
+    "name": "Reactive Gas",
+    "planets": [
+      "gas"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Reactive Gas"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "suspended-plasma",
+    "typeId": 2308,
+    "tier": 0,
+    "name": "Suspended Plasma",
+    "planets": [
+      "lava",
+      "plasma",
+      "storm"
+    ],
+    "inputs": [],
+    "inputItems": [],
+    "rawInputs": [
+      "Suspended Plasma"
+    ],
+    "outputQuantity": null,
+    "cycleTime": null,
+    "schematicId": null
+  },
+  {
+    "id": "bacteria",
+    "typeId": 2393,
+    "tier": 1,
+    "name": "Bacteria",
+    "planets": [],
+    "inputs": [
+      "Microorganisms"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2073,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Microorganisms"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 131
+  },
+  {
+    "id": "biofuels",
+    "typeId": 2396,
+    "tier": 1,
+    "name": "Biofuels",
+    "planets": [
+      "barren",
+      "oceanic",
+      "temperate"
+    ],
+    "inputs": [
+      "Carbon Compounds"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2288,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Carbon Compounds"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 134
+  },
+  {
+    "id": "biomass",
+    "typeId": 3779,
+    "tier": 1,
+    "name": "Biomass",
+    "planets": [
+      "ice",
+      "oceanic"
+    ],
+    "inputs": [
+      "Planktic Colonies"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2286,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 132
+  },
+  {
+    "id": "chiral-structures",
+    "typeId": 2401,
+    "tier": 1,
+    "name": "Chiral Structures",
+    "planets": [
+      "lava",
+      "plasma"
+    ],
+    "inputs": [
+      "Non-CS Crystals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2306,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 129
+  },
+  {
+    "id": "electrolytes",
+    "typeId": 2390,
+    "tier": 1,
+    "name": "Electrolytes",
+    "planets": [
+      "gas",
+      "storm"
+    ],
+    "inputs": [
+      "Ionic Solutions"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2309,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Ionic Solutions"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 123
+  },
+  {
+    "id": "industrial-fibers",
+    "typeId": 2397,
+    "tier": 1,
+    "name": "Industrial Fibers",
+    "planets": [
+      "temperate"
+    ],
+    "inputs": [
+      "Autotrophs"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2305,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 135
+  },
+  {
+    "id": "oxidizing-compound",
+    "typeId": 2392,
+    "tier": 1,
+    "name": "Oxidizing Compound",
+    "planets": [
+      "gas"
+    ],
+    "inputs": [
+      "Reactive Gas"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2311,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Reactive Gas"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 125
+  },
+  {
+    "id": "oxygen",
+    "typeId": 3683,
+    "tier": 1,
+    "name": "Oxygen",
+    "planets": [
+      "gas",
+      "ice",
+      "storm"
+    ],
+    "inputs": [
+      "Noble Gas"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2310,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Noble Gas"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 124
+  },
+  {
+    "id": "plasmoids",
+    "typeId": 2389,
+    "tier": 1,
+    "name": "Plasmoids",
+    "planets": [
+      "lava",
+      "plasma",
+      "storm"
+    ],
+    "inputs": [
+      "Suspended Plasma"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2308,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 122
+  },
+  {
+    "id": "precious-metals",
+    "typeId": 2399,
+    "tier": 1,
+    "name": "Precious Metals",
+    "planets": [
+      "barren",
+      "plasma"
+    ],
+    "inputs": [
+      "Noble Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2270,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Noble Metals"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 127
+  },
+  {
+    "id": "proteins",
+    "typeId": 2395,
+    "tier": 1,
+    "name": "Proteins",
+    "planets": [
+      "oceanic",
+      "temperate"
+    ],
+    "inputs": [
+      "Complex Organisms"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2287,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Complex Organisms"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 133
+  },
+  {
+    "id": "reactive-metals",
+    "typeId": 2398,
+    "tier": 1,
+    "name": "Reactive Metals",
+    "planets": [
+      "barren",
+      "gas",
+      "lava",
+      "plasma",
+      "storm"
+    ],
+    "inputs": [
+      "Base Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2267,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Base Metals"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 126
+  },
+  {
+    "id": "silicon",
+    "typeId": 9828,
+    "tier": 1,
+    "name": "Silicon",
+    "planets": [
+      "lava"
+    ],
+    "inputs": [
+      "Felsic Magma"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2307,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Felsic Magma"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 130
+  },
+  {
+    "id": "toxic-metals",
+    "typeId": 2400,
+    "tier": 1,
+    "name": "Toxic Metals",
+    "planets": [
+      "ice",
+      "lava",
+      "plasma"
+    ],
+    "inputs": [
+      "Heavy Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2272,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Heavy Metals"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 128
+  },
+  {
+    "id": "water",
+    "typeId": 3645,
+    "tier": 1,
+    "name": "Water",
+    "planets": [
+      "barren",
+      "gas",
+      "ice",
+      "oceanic",
+      "storm",
+      "temperate"
+    ],
+    "inputs": [
+      "Aqueous Liquids"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2268,
+        "quantity": 3000
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids"
+    ],
+    "outputQuantity": 20,
+    "cycleTime": 1800,
+    "schematicId": 121
+  },
+  {
+    "id": "biocells",
+    "typeId": 2329,
+    "tier": 2,
+    "name": "Biocells",
+    "planets": [
+      "barren"
+    ],
+    "inputs": [
+      "Biofuels",
+      "Precious Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2396,
+        "quantity": 40
+      },
+      {
+        "typeId": 2399,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Carbon Compounds",
+      "Noble Metals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 79
+  },
+  {
+    "id": "construction-blocks",
+    "typeId": 3828,
+    "tier": 2,
+    "name": "Construction Blocks",
+    "planets": [
+      "lava",
+      "plasma"
+    ],
+    "inputs": [
+      "Reactive Metals",
+      "Toxic Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2398,
+        "quantity": 40
+      },
+      {
+        "typeId": 2400,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Heavy Metals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 74
+  },
+  {
+    "id": "consumer-electronics",
+    "typeId": 9836,
+    "tier": 2,
+    "name": "Consumer Electronics",
+    "planets": [
+      "lava",
+      "plasma"
+    ],
+    "inputs": [
+      "Toxic Metals",
+      "Chiral Structures"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2400,
+        "quantity": 40
+      },
+      {
+        "typeId": 2401,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Heavy Metals",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 76
+  },
+  {
+    "id": "coolant",
+    "typeId": 9832,
+    "tier": 2,
+    "name": "Coolant",
+    "planets": [
+      "gas",
+      "storm"
+    ],
+    "inputs": [
+      "Electrolytes",
+      "Water"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2390,
+        "quantity": 40
+      },
+      {
+        "typeId": 3645,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Ionic Solutions"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 66
+  },
+  {
+    "id": "enriched-uranium",
+    "typeId": 44,
+    "tier": 2,
+    "name": "Enriched Uranium",
+    "planets": [
+      "plasma"
+    ],
+    "inputs": [
+      "Precious Metals",
+      "Toxic Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2399,
+        "quantity": 40
+      },
+      {
+        "typeId": 2400,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Heavy Metals",
+      "Noble Metals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 75
+  },
+  {
+    "id": "fertilizer",
+    "typeId": 3693,
+    "tier": 2,
+    "name": "Fertilizer",
+    "planets": [],
+    "inputs": [
+      "Bacteria",
+      "Proteins"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2393,
+        "quantity": 40
+      },
+      {
+        "typeId": 2395,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Complex Organisms",
+      "Microorganisms"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 82
+  },
+  {
+    "id": "genetically-enhanced-livestock",
+    "typeId": 15317,
+    "tier": 2,
+    "name": "Genetically Enhanced Livestock",
+    "planets": [
+      "oceanic"
+    ],
+    "inputs": [
+      "Proteins",
+      "Biomass"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2395,
+        "quantity": 40
+      },
+      {
+        "typeId": 3779,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Complex Organisms",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 83
+  },
+  {
+    "id": "livestock",
+    "typeId": 3725,
+    "tier": 2,
+    "name": "Livestock",
+    "planets": [
+      "oceanic",
+      "temperate"
+    ],
+    "inputs": [
+      "Proteins",
+      "Biofuels"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2395,
+        "quantity": 40
+      },
+      {
+        "typeId": 2396,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Carbon Compounds",
+      "Complex Organisms"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 84
+  },
+  {
+    "id": "mechanical-parts",
+    "typeId": 3689,
+    "tier": 2,
+    "name": "Mechanical Parts",
+    "planets": [
+      "barren",
+      "plasma"
+    ],
+    "inputs": [
+      "Reactive Metals",
+      "Precious Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2398,
+        "quantity": 40
+      },
+      {
+        "typeId": 2399,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Noble Metals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 73
+  },
+  {
+    "id": "microfiber-shielding",
+    "typeId": 2327,
+    "tier": 2,
+    "name": "Microfiber Shielding",
+    "planets": [],
+    "inputs": [
+      "Industrial Fibers",
+      "Silicon"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2397,
+        "quantity": 40
+      },
+      {
+        "typeId": 9828,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Felsic Magma"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 80
+  },
+  {
+    "id": "miniature-electronics",
+    "typeId": 9842,
+    "tier": 2,
+    "name": "Miniature Electronics",
+    "planets": [
+      "lava"
+    ],
+    "inputs": [
+      "Chiral Structures",
+      "Silicon"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2401,
+        "quantity": 40
+      },
+      {
+        "typeId": 9828,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Felsic Magma",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 77
+  },
+  {
+    "id": "nanites",
+    "typeId": 2463,
+    "tier": 2,
+    "name": "Nanites",
+    "planets": [],
+    "inputs": [
+      "Bacteria",
+      "Reactive Metals"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2393,
+        "quantity": 40
+      },
+      {
+        "typeId": 2398,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Microorganisms"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 78
+  },
+  {
+    "id": "oxides",
+    "typeId": 2317,
+    "tier": 2,
+    "name": "Oxides",
+    "planets": [
+      "gas"
+    ],
+    "inputs": [
+      "Oxidizing Compound",
+      "Oxygen"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2392,
+        "quantity": 40
+      },
+      {
+        "typeId": 3683,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Noble Gas",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 69
+  },
+  {
+    "id": "polyaramids",
+    "typeId": 2321,
+    "tier": 2,
+    "name": "Polyaramids",
+    "planets": [],
+    "inputs": [
+      "Oxidizing Compound",
+      "Industrial Fibers"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2392,
+        "quantity": 40
+      },
+      {
+        "typeId": 2397,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 88
+  },
+  {
+    "id": "polytextiles",
+    "typeId": 3695,
+    "tier": 2,
+    "name": "Polytextiles",
+    "planets": [
+      "temperate"
+    ],
+    "inputs": [
+      "Biofuels",
+      "Industrial Fibers"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2396,
+        "quantity": 40
+      },
+      {
+        "typeId": 2397,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Carbon Compounds"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 85
+  },
+  {
+    "id": "rocket-fuel",
+    "typeId": 9830,
+    "tier": 2,
+    "name": "Rocket Fuel",
+    "planets": [
+      "storm"
+    ],
+    "inputs": [
+      "Plasmoids",
+      "Electrolytes"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2389,
+        "quantity": 40
+      },
+      {
+        "typeId": 2390,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Ionic Solutions",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 67
+  },
+  {
+    "id": "silicate-glass",
+    "typeId": 3697,
+    "tier": 2,
+    "name": "Silicate Glass",
+    "planets": [],
+    "inputs": [
+      "Oxidizing Compound",
+      "Silicon"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2392,
+        "quantity": 40
+      },
+      {
+        "typeId": 9828,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Felsic Magma",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 70
+  },
+  {
+    "id": "superconductors",
+    "typeId": 9838,
+    "tier": 2,
+    "name": "Superconductors",
+    "planets": [
+      "storm"
+    ],
+    "inputs": [
+      "Plasmoids",
+      "Water"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2389,
+        "quantity": 40
+      },
+      {
+        "typeId": 3645,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 65
+  },
+  {
+    "id": "supertensile-plastics",
+    "typeId": 2312,
+    "tier": 2,
+    "name": "Supertensile Plastics",
+    "planets": [
+      "ice"
+    ],
+    "inputs": [
+      "Oxygen",
+      "Biomass"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3683,
+        "quantity": 40
+      },
+      {
+        "typeId": 3779,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Noble Gas",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 87
+  },
+  {
+    "id": "synthetic-oil",
+    "typeId": 3691,
+    "tier": 2,
+    "name": "Synthetic Oil",
+    "planets": [
+      "gas",
+      "storm"
+    ],
+    "inputs": [
+      "Electrolytes",
+      "Oxygen"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2390,
+        "quantity": 40
+      },
+      {
+        "typeId": 3683,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Ionic Solutions",
+      "Noble Gas"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 68
+  },
+  {
+    "id": "test-cultures",
+    "typeId": 2319,
+    "tier": 2,
+    "name": "Test Cultures",
+    "planets": [],
+    "inputs": [
+      "Bacteria",
+      "Water"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2393,
+        "quantity": 40
+      },
+      {
+        "typeId": 3645,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Microorganisms"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 86
+  },
+  {
+    "id": "transmitter",
+    "typeId": 9840,
+    "tier": 2,
+    "name": "Transmitter",
+    "planets": [
+      "lava",
+      "plasma"
+    ],
+    "inputs": [
+      "Plasmoids",
+      "Chiral Structures"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2389,
+        "quantity": 40
+      },
+      {
+        "typeId": 2401,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Non-CS Crystals",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 71
+  },
+  {
+    "id": "viral-agent",
+    "typeId": 3775,
+    "tier": 2,
+    "name": "Viral Agent",
+    "planets": [],
+    "inputs": [
+      "Bacteria",
+      "Biomass"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2393,
+        "quantity": 40
+      },
+      {
+        "typeId": 3779,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Microorganisms",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 81
+  },
+  {
+    "id": "water-cooled-cpu",
+    "typeId": 2328,
+    "tier": 2,
+    "name": "Water-Cooled CPU",
+    "planets": [
+      "barren",
+      "gas",
+      "storm"
+    ],
+    "inputs": [
+      "Reactive Metals",
+      "Water"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2398,
+        "quantity": 40
+      },
+      {
+        "typeId": 3645,
+        "quantity": 40
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals"
+    ],
+    "outputQuantity": 5,
+    "cycleTime": 3600,
+    "schematicId": 72
+  },
+  {
+    "id": "biotech-research-reports",
+    "typeId": 2358,
+    "tier": 3,
+    "name": "Biotech Research Reports",
+    "planets": [],
+    "inputs": [
+      "Nanites",
+      "Livestock",
+      "Construction Blocks"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2463,
+        "quantity": 10
+      },
+      {
+        "typeId": 3725,
+        "quantity": 10
+      },
+      {
+        "typeId": 3828,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Heavy Metals",
+      "Microorganisms"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 104
+  },
+  {
+    "id": "camera-drones",
+    "typeId": 2345,
+    "tier": 3,
+    "name": "Camera Drones",
+    "planets": [],
+    "inputs": [
+      "Silicate Glass",
+      "Rocket Fuel"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3697,
+        "quantity": 10
+      },
+      {
+        "typeId": 9830,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Felsic Magma",
+      "Ionic Solutions",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 91
+  },
+  {
+    "id": "condensates",
+    "typeId": 2344,
+    "tier": 3,
+    "name": "Condensates",
+    "planets": [
+      "gas"
+    ],
+    "inputs": [
+      "Oxides",
+      "Coolant"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2317,
+        "quantity": 10
+      },
+      {
+        "typeId": 9832,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Ionic Solutions",
+      "Noble Gas",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 90
+  },
+  {
+    "id": "cryoprotectant-solution",
+    "typeId": 2367,
+    "tier": 3,
+    "name": "Cryoprotectant Solution",
+    "planets": [],
+    "inputs": [
+      "Test Cultures",
+      "Synthetic Oil",
+      "Fertilizer"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2319,
+        "quantity": 10
+      },
+      {
+        "typeId": 3691,
+        "quantity": 10
+      },
+      {
+        "typeId": 3693,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Complex Organisms",
+      "Ionic Solutions",
+      "Microorganisms",
+      "Noble Gas"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 111
+  },
+  {
+    "id": "data-chips",
+    "typeId": 17392,
+    "tier": 3,
+    "name": "Data Chips",
+    "planets": [],
+    "inputs": [
+      "Supertensile Plastics",
+      "Microfiber Shielding"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2312,
+        "quantity": 10
+      },
+      {
+        "typeId": 2327,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Felsic Magma",
+      "Noble Gas",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 109
+  },
+  {
+    "id": "gel-matrix-biopaste",
+    "typeId": 2348,
+    "tier": 3,
+    "name": "Gel-Matrix Biopaste",
+    "planets": [],
+    "inputs": [
+      "Oxides",
+      "Biocells",
+      "Superconductors"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2317,
+        "quantity": 10
+      },
+      {
+        "typeId": 2329,
+        "quantity": 10
+      },
+      {
+        "typeId": 9838,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Carbon Compounds",
+      "Noble Gas",
+      "Noble Metals",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 95
+  },
+  {
+    "id": "guidance-systems",
+    "typeId": 9834,
+    "tier": 3,
+    "name": "Guidance Systems",
+    "planets": [],
+    "inputs": [
+      "Water-Cooled CPU",
+      "Transmitter"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2328,
+        "quantity": 10
+      },
+      {
+        "typeId": 9840,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Non-CS Crystals",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 100
+  },
+  {
+    "id": "hazmat-detection-systems",
+    "typeId": 2366,
+    "tier": 3,
+    "name": "Hazmat Detection Systems",
+    "planets": [],
+    "inputs": [
+      "Polytextiles",
+      "Viral Agent",
+      "Transmitter"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3695,
+        "quantity": 10
+      },
+      {
+        "typeId": 3775,
+        "quantity": 10
+      },
+      {
+        "typeId": 9840,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Carbon Compounds",
+      "Microorganisms",
+      "Non-CS Crystals",
+      "Planktic Colonies",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 110
+  },
+  {
+    "id": "hermetic-membranes",
+    "typeId": 2361,
+    "tier": 3,
+    "name": "Hermetic Membranes",
+    "planets": [],
+    "inputs": [
+      "Polyaramids",
+      "Genetically Enhanced Livestock"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2321,
+        "quantity": 10
+      },
+      {
+        "typeId": 15317,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Complex Organisms",
+      "Planktic Colonies",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 107
+  },
+  {
+    "id": "high-tech-transmitters",
+    "typeId": 17898,
+    "tier": 3,
+    "name": "High-Tech Transmitters",
+    "planets": [],
+    "inputs": [
+      "Polyaramids",
+      "Transmitter"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2321,
+        "quantity": 10
+      },
+      {
+        "typeId": 9840,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Non-CS Crystals",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 94
+  },
+  {
+    "id": "industrial-explosives",
+    "typeId": 2360,
+    "tier": 3,
+    "name": "Industrial Explosives",
+    "planets": [],
+    "inputs": [
+      "Fertilizer",
+      "Polytextiles"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3693,
+        "quantity": 10
+      },
+      {
+        "typeId": 3695,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Microorganisms"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 106
+  },
+  {
+    "id": "neocoms",
+    "typeId": 2354,
+    "tier": 3,
+    "name": "Neocoms",
+    "planets": [],
+    "inputs": [
+      "Biocells",
+      "Silicate Glass"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2329,
+        "quantity": 10
+      },
+      {
+        "typeId": 3697,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Carbon Compounds",
+      "Felsic Magma",
+      "Noble Metals",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 102
+  },
+  {
+    "id": "nuclear-reactors",
+    "typeId": 2352,
+    "tier": 3,
+    "name": "Nuclear Reactors",
+    "planets": [],
+    "inputs": [
+      "Enriched Uranium",
+      "Microfiber Shielding"
+    ],
+    "inputItems": [
+      {
+        "typeId": 44,
+        "quantity": 10
+      },
+      {
+        "typeId": 2327,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Felsic Magma",
+      "Heavy Metals",
+      "Noble Metals"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 99
+  },
+  {
+    "id": "planetary-vehicles",
+    "typeId": 9846,
+    "tier": 3,
+    "name": "Planetary Vehicles",
+    "planets": [],
+    "inputs": [
+      "Supertensile Plastics",
+      "Mechanical Parts",
+      "Miniature Electronics"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2312,
+        "quantity": 10
+      },
+      {
+        "typeId": 3689,
+        "quantity": 10
+      },
+      {
+        "typeId": 9842,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Felsic Magma",
+      "Noble Gas",
+      "Noble Metals",
+      "Non-CS Crystals",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 103
+  },
+  {
+    "id": "robotics",
+    "typeId": 9848,
+    "tier": 3,
+    "name": "Robotics",
+    "planets": [
+      "plasma"
+    ],
+    "inputs": [
+      "Mechanical Parts",
+      "Consumer Electronics"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3689,
+        "quantity": 10
+      },
+      {
+        "typeId": 9836,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Heavy Metals",
+      "Noble Metals",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 97
+  },
+  {
+    "id": "smartfab-units",
+    "typeId": 2351,
+    "tier": 3,
+    "name": "Smartfab Units",
+    "planets": [
+      "lava"
+    ],
+    "inputs": [
+      "Construction Blocks",
+      "Miniature Electronics"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3828,
+        "quantity": 10
+      },
+      {
+        "typeId": 9842,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Felsic Magma",
+      "Heavy Metals",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 98
+  },
+  {
+    "id": "supercomputers",
+    "typeId": 2349,
+    "tier": 3,
+    "name": "Supercomputers",
+    "planets": [],
+    "inputs": [
+      "Water-Cooled CPU",
+      "Coolant",
+      "Consumer Electronics"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2328,
+        "quantity": 10
+      },
+      {
+        "typeId": 9832,
+        "quantity": 10
+      },
+      {
+        "typeId": 9836,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Heavy Metals",
+      "Ionic Solutions",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 96
+  },
+  {
+    "id": "synthetic-synapses",
+    "typeId": 2346,
+    "tier": 3,
+    "name": "Synthetic Synapses",
+    "planets": [],
+    "inputs": [
+      "Supertensile Plastics",
+      "Test Cultures"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2312,
+        "quantity": 10
+      },
+      {
+        "typeId": 2319,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Microorganisms",
+      "Noble Gas",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 92
+  },
+  {
+    "id": "transcranial-microcontrollers",
+    "typeId": 12836,
+    "tier": 3,
+    "name": "Transcranial Microcontrollers",
+    "planets": [],
+    "inputs": [
+      "Biocells",
+      "Nanites"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2329,
+        "quantity": 10
+      },
+      {
+        "typeId": 2463,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Base Metals",
+      "Carbon Compounds",
+      "Microorganisms",
+      "Noble Metals"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 108
+  },
+  {
+    "id": "ukomi-superconductors",
+    "typeId": 17136,
+    "tier": 3,
+    "name": "Ukomi Superconductors",
+    "planets": [
+      "storm"
+    ],
+    "inputs": [
+      "Synthetic Oil",
+      "Superconductors"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3691,
+        "quantity": 10
+      },
+      {
+        "typeId": 9838,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Ionic Solutions",
+      "Noble Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 89
+  },
+  {
+    "id": "vaccines",
+    "typeId": 28974,
+    "tier": 3,
+    "name": "Vaccines",
+    "planets": [],
+    "inputs": [
+      "Livestock",
+      "Viral Agent"
+    ],
+    "inputItems": [
+      {
+        "typeId": 3725,
+        "quantity": 10
+      },
+      {
+        "typeId": 3775,
+        "quantity": 10
+      }
+    ],
+    "rawInputs": [
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Microorganisms",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 3,
+    "cycleTime": 3600,
+    "schematicId": 105
+  },
+  {
+    "id": "broadcast-node",
+    "typeId": 2867,
+    "tier": 4,
+    "name": "Broadcast Node",
+    "planets": [],
+    "inputs": [
+      "Neocoms",
+      "Data Chips",
+      "High-Tech Transmitters"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2354,
+        "quantity": 6
+      },
+      {
+        "typeId": 17392,
+        "quantity": 6
+      },
+      {
+        "typeId": 17898,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Carbon Compounds",
+      "Felsic Magma",
+      "Noble Gas",
+      "Noble Metals",
+      "Non-CS Crystals",
+      "Planktic Colonies",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 117
+  },
+  {
+    "id": "integrity-response-drones",
+    "typeId": 2868,
+    "tier": 4,
+    "name": "Integrity Response Drones",
+    "planets": [],
+    "inputs": [
+      "Gel-Matrix Biopaste",
+      "Hazmat Detection Systems",
+      "Planetary Vehicles"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2348,
+        "quantity": 6
+      },
+      {
+        "typeId": 2366,
+        "quantity": 6
+      },
+      {
+        "typeId": 9846,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Autotrophs",
+      "Base Metals",
+      "Carbon Compounds",
+      "Felsic Magma",
+      "Microorganisms",
+      "Noble Gas",
+      "Noble Metals",
+      "Non-CS Crystals",
+      "Planktic Colonies",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 118
+  },
+  {
+    "id": "nano-factory",
+    "typeId": 2869,
+    "tier": 4,
+    "name": "Nano-Factory",
+    "planets": [],
+    "inputs": [
+      "Industrial Explosives",
+      "Reactive Metals",
+      "Ukomi Superconductors"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2360,
+        "quantity": 6
+      },
+      {
+        "typeId": 2398,
+        "quantity": 40
+      },
+      {
+        "typeId": 17136,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Autotrophs",
+      "Base Metals",
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Ionic Solutions",
+      "Microorganisms",
+      "Noble Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 114
+  },
+  {
+    "id": "organic-mortar-applicators",
+    "typeId": 2870,
+    "tier": 4,
+    "name": "Organic Mortar Applicators",
+    "planets": [],
+    "inputs": [
+      "Condensates",
+      "Bacteria",
+      "Robotics"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2344,
+        "quantity": 6
+      },
+      {
+        "typeId": 2393,
+        "quantity": 40
+      },
+      {
+        "typeId": 9848,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Heavy Metals",
+      "Ionic Solutions",
+      "Microorganisms",
+      "Noble Gas",
+      "Noble Metals",
+      "Non-CS Crystals",
+      "Reactive Gas"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 112
+  },
+  {
+    "id": "recursive-computing-module",
+    "typeId": 2871,
+    "tier": 4,
+    "name": "Recursive Computing Module",
+    "planets": [],
+    "inputs": [
+      "Synthetic Synapses",
+      "Guidance Systems",
+      "Transcranial Microcontrollers"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2346,
+        "quantity": 6
+      },
+      {
+        "typeId": 9834,
+        "quantity": 6
+      },
+      {
+        "typeId": 12836,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Carbon Compounds",
+      "Microorganisms",
+      "Noble Gas",
+      "Noble Metals",
+      "Non-CS Crystals",
+      "Planktic Colonies",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 116
+  },
+  {
+    "id": "self-harmonizing-power-core",
+    "typeId": 2872,
+    "tier": 4,
+    "name": "Self-Harmonizing Power Core",
+    "planets": [],
+    "inputs": [
+      "Camera Drones",
+      "Nuclear Reactors",
+      "Hermetic Membranes"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2345,
+        "quantity": 6
+      },
+      {
+        "typeId": 2352,
+        "quantity": 6
+      },
+      {
+        "typeId": 2361,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Autotrophs",
+      "Complex Organisms",
+      "Felsic Magma",
+      "Heavy Metals",
+      "Ionic Solutions",
+      "Noble Metals",
+      "Planktic Colonies",
+      "Reactive Gas",
+      "Suspended Plasma"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 115
+  },
+  {
+    "id": "sterile-conduits",
+    "typeId": 2875,
+    "tier": 4,
+    "name": "Sterile Conduits",
+    "planets": [],
+    "inputs": [
+      "Smartfab Units",
+      "Water",
+      "Vaccines"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2351,
+        "quantity": 6
+      },
+      {
+        "typeId": 3645,
+        "quantity": 40
+      },
+      {
+        "typeId": 28974,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Felsic Magma",
+      "Heavy Metals",
+      "Microorganisms",
+      "Non-CS Crystals",
+      "Planktic Colonies"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 113
+  },
+  {
+    "id": "wetware-mainframe",
+    "typeId": 2876,
+    "tier": 4,
+    "name": "Wetware Mainframe",
+    "planets": [],
+    "inputs": [
+      "Supercomputers",
+      "Biotech Research Reports",
+      "Cryoprotectant Solution"
+    ],
+    "inputItems": [
+      {
+        "typeId": 2349,
+        "quantity": 6
+      },
+      {
+        "typeId": 2358,
+        "quantity": 6
+      },
+      {
+        "typeId": 2367,
+        "quantity": 6
+      }
+    ],
+    "rawInputs": [
+      "Aqueous Liquids",
+      "Base Metals",
+      "Carbon Compounds",
+      "Complex Organisms",
+      "Heavy Metals",
+      "Ionic Solutions",
+      "Microorganisms",
+      "Noble Gas",
+      "Non-CS Crystals"
+    ],
+    "outputQuantity": 1,
+    "cycleTime": 3600,
+    "schematicId": 119
+  }
+]

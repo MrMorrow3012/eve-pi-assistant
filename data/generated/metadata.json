@@ -1,0 +1,23 @@
+{
+  "version": "0.5.0",
+  "source": "CCP EVE Online Static Data Export (JSONL)",
+  "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
+  "sdeBuild": "3464040",
+  "generated": "2026-08-28",
+  "live": true,
+  "characterLoginRequired": false,
+  "counts": {
+    "systems": 8490,
+    "regions": 114,
+    "planets": 67693,
+    "stargateLinks": 6989,
+    "products": 83,
+    "schematics": 68,
+    "restrictedSystems": 119
+  },
+  "notes": [
+    "System, region, security, planet, stargate, item and schematic records come from CCP's SDE.",
+    "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
+    "Named restrictions and shattered-system IDs are explicit and data-driven."
+  ]
+}

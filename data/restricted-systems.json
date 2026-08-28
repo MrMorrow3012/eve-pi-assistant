@@ -1,6 +1,14 @@
 {
-  "schema_version": 1,
-  "status": "curated_placeholder_requiring_verification",
-  "note": "Keep restrictions data-driven; do not infer eligibility from planets.",
-  "systems": ["Amarr", "Arnon", "Aunia", "Auvergne", "Balginia", "Dodixie", "Fricoure", "Ichoriya", "Irjunen", "Isaziwa", "Isinokka", "Jita", "Lustrevik", "Motsu", "Oursulaert", "Rens", "Sankkasen", "Umokka"]
+  "schema_version": 2,
+  "status": "verified_public_rules_2026-08-28",
+  "note": "Restrictions are explicit; never infer PI eligibility from security status or planet count.",
+  "named_systems": ["Amarr", "Arnon", "Aunia", "Auvergne", "Balginia", "Dodixie", "Fricoure", "Ichoriya", "Irjunen", "Isaziwa", "Isinokka", "Jita", "Lustrevik", "Motsu", "Oursulaert", "Rens", "Sankkasen", "Umokka"],
+  "shattered_system_ids": {
+    "thera": 31000005,
+    "inclusive_range": [31002505, 31002604]
+  },
+  "sources": [
+    "https://wiki.eveuniversity.org/Planetary_Industry",
+    "https://www.eveonline.com/news/view/thera-and-the-shattered-wormholes"
+  ]
 }
