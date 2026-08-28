@@ -1,3 +1,3 @@
 # Beginner Guide
 
-Research placeholder.
+PI-from-zero guidance will be built here.

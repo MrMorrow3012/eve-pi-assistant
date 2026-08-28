@@ -1,3 +1,3 @@
 # PI Mechanics
 
-Research placeholder.
+Verified mechanics and sources will be documented here.
