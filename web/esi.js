@@ -7,7 +7,7 @@ window.EVE_ESI = (()=>{
   const headers={
     "Accept":"application/json",
     "X-Compatibility-Date":compatibilityDate,
-    "X-User-Agent":"EVE-PI-Assistant/0.6 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
+    "X-User-Agent":"EVE-PI-Assistant/0.7 (+https://github.com/mrmorrow3012/eve-pi-assistant)"
   };
 
   async function request(path,options={}){
@@ -25,7 +25,7 @@ window.EVE_ESI = (()=>{
     getSystem:systemId=>request(`/universe/systems/${systemId}`),
     getPlanet:planetId=>request(`/universe/planets/${planetId}`),
     resolveNames:names=>request("/universe/ids",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(names)}),
-    calculateRoute:(origin,destination,preference="shorter")=>request("/route",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({origin,destination,preference})}),
+    calculateRoute:(origin,destination,preference="Shorter")=>request(`/route/${origin}/${destination}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({preference})}),
     clearCache:()=>cache.clear()
   };
 })();

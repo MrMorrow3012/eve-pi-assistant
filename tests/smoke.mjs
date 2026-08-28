@@ -14,11 +14,13 @@ globalThis.document={
 vm.runInThisContext(fs.readFileSync(new URL("../web/data/pi-data.js",import.meta.url),"utf8"));
 vm.runInThisContext(fs.readFileSync(new URL("../web/app.js",import.meta.url),"utf8"));
 
-assert.equal(piData.metadata.version,"0.6.0");
+assert.equal(piData.metadata.version,"0.7.0");
 assert.equal(piData.metadata.counts.systems,8490);
 assert.equal(matchingSystems("Atlan")[0],"Atlangeins");
 assert.equal(getSystem("Jita").restricted,true);
 assert.equal(getSystem("Sobaseki").planetTotal,13);
+assert.equal(getSystem("Sobaseki").planetInstances.length,13);
+assert.ok(getSystem("Sobaseki").planetInstances.every(planet=>planet.id&&planet.radius>0));
 assert.equal(distanceBetween("Jita","Perimeter"),1);
 assert.match(pageContent.innerHTML,/CCP SDE/);
 
@@ -52,5 +54,40 @@ render();
 assert.match(pageContent.innerHTML,/Colony Fitting/);
 assert.match(pageContent.innerHTML,/POWERGRID/);
 assert.match(pageContent.innerHTML,/SDE STRUCTURE REFERENCE/);
+assert.match(pageContent.innerHTML,/BUILD LAYOUT & ROUTES/);
 
-console.log("v0.6 smoke checks passed");
+const layoutPlanet=fittingSelected()[0];
+const layoutRole=state.colony.roles[layoutPlanet.id];
+const layout=layoutMetrics(layoutPlanet,layoutRole,product);
+assert.ok(layout.pins.some(pin=>pin.key==="commandCenter"));
+assert.ok(layout.links.length>0);
+assert.ok(layout.totalDistance>0);
+assert.ok(layout.linkPower>0);
+assert.ok(routeRows(layoutPlanet,layoutRole,product,layout.fit).length>0);
+assert.ok(operationBalance(fittingSelected(),product).rows.length>0);
+
+state.page="layout";
+render();
+assert.match(pageContent.innerHTML,/Colony Layout & Routing/);
+assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
+assert.match(pageContent.innerHTML,/BEGINNER BUILD ORDER/);
+assert.match(pageContent.innerHTML,/OPERATION-WIDE PRODUCTION BALANCE/);
+
+for(const tier of [1,2,3,4]){
+  let representative=null;
+  for(const tierProduct of piData.products.filter(item=>item.tier===tier)){
+    const system=piData.systems.find(item=>coverage(item,tierProduct).complete);
+    if(system){representative={tierProduct,system};break}
+  }
+  assert.ok(representative,`P${tier} should have a complete system`);
+  makeRecommendedPlan(representative.system.name,representative.tierProduct.id);
+  const planets=fittingSelected();
+  assert.ok(planets.length>0,`P${tier} plan should select planets`);
+  const first=planets[0],firstRole=state.colony.roles[first.id];
+  assert.ok(layoutMetrics(first,firstRole,representative.tierProduct).links.length>0);
+  state.page="layout";
+  render();
+  assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
+}
+
+console.log("v0.7 smoke checks passed");

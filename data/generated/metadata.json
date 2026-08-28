@@ -1,5 +1,5 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "source": "CCP EVE Online Static Data Export (JSONL)",
   "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
   "sdeBuild": "3464040",
@@ -18,6 +18,7 @@
   },
   "notes": [
     "System, region, security, planet, stargate, item and schematic records come from CCP's SDE.",
+    "Individual planet IDs, orbital indices and radii support the colony layout distance model.",
     "Command-center outputs and planetary structure CPU, powergrid, capacity and base-price records come from CCP typeDogma and type data.",
     "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
     "Named restrictions and shattered-system IDs are explicit and data-driven."

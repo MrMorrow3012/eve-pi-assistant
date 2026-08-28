@@ -107,6 +107,7 @@ def main() -> None:
                 "region": regions.get(row["regionID"], "Unknown"),
                 "security": round(float(row.get("securityStatus", -1)), 4),
                 "planets": {},
+                "planetInstances": [],
                 "neighbors": set(),
             }
 
@@ -116,6 +117,12 @@ def main() -> None:
             if planet and system:
                 planet_slug = planet[0]
                 system["planets"][planet_slug] = system["planets"].get(planet_slug, 0) + 1
+                system["planetInstances"].append({
+                    "id": row["_key"],
+                    "typeId": planet_slug,
+                    "index": row.get("celestialIndex"),
+                    "radius": int(row.get("radius", 0)),
+                })
 
         for row in rows(archive, "mapStargates.jsonl"):
             origin = row.get("solarSystemID")
@@ -259,13 +266,14 @@ def main() -> None:
         systems.append({
             **{key: value for key, value in system.items() if key != "neighbors"},
             "planetTotal": sum(system["planets"].values()),
+            "planetInstances": sorted(system["planetInstances"], key=lambda planet: planet["index"] or 0),
             "neighbors": sorted(system["neighbors"]),
             "restricted": restricted,
             "restrictionReason": "Shattered wormhole system" if shattered else ("High-traffic or storyline restriction" if named_restriction else None),
         })
 
     metadata = {
-        "version": "0.6.0",
+        "version": "0.7.0",
         "source": "CCP EVE Online Static Data Export (JSONL)",
         "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
         "sdeBuild": str(args.build),
@@ -284,6 +292,7 @@ def main() -> None:
         },
         "notes": [
             "System, region, security, planet, stargate, item and schematic records come from CCP's SDE.",
+            "Individual planet IDs, orbital indices and radii support the colony layout distance model.",
             "Command-center outputs and planetary structure CPU, powergrid, capacity and base-price records come from CCP typeDogma and type data.",
             "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
             "Named restrictions and shattered-system IDs are explicit and data-driven.",

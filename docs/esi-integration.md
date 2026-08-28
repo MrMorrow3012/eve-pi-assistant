@@ -46,5 +46,5 @@ Do not add client secrets, access tokens, refresh tokens, or authenticated ESI s
 1. Generate verified universe and PI datasets from the SDE.
 2. Enable public name resolution and selected-system refresh through ESI.
 3. Add local breadth-first jump search using the generated stargate graph.
-4. Add route preference and hauling analysis using `POST /route` when appropriate.
+4. Add route preference and hauling analysis using `POST /route/{origin}/{destination}` when appropriate.
 5. Continue improving the unauthenticated workflow; character import remains out of scope.
