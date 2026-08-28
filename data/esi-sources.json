@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "compatibility_date": "2026-08-28",
+  "public_sources": {
+    "name_to_id": "POST /universe/ids",
+    "system": "GET /universe/systems/{system_id}",
+    "planet": "GET /universe/planets/{planet_id}",
+    "route": "POST /route"
+  },
+  "authenticated_sources": {
+    "colonies": "character planetary-colony routes; confirm current operation names and scopes in CCP API Explorer",
+    "customs_offices": "corporation customs-office routes; confirm current operation names, roles, and scopes in CCP API Explorer"
+  },
+  "static_data": ["planet resource relationships", "P0-P4 products", "schematics", "stargate graph for bulk proximity search"],
+  "application_data": ["restricted PI systems", "player-entered POCO tax", "fit scores", "risk preferences"]
+}
