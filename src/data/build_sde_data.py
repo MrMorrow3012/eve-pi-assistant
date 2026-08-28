@@ -27,6 +27,18 @@ PLANET_TYPE_IDS = {
     11: ("temperate", "Temperate", "#62a873"),
 }
 
+STRUCTURE_TYPE_IDS = {
+    "commandCenter": 2524,
+    "ecu": 2848,
+    "basic": 2473,
+    "advanced": 2474,
+    "highTech": 2475,
+    "launchpad": 2544,
+    "storage": 2541,
+}
+
+COMMAND_CENTER_LEVEL_TYPE_IDS = [2524, 2129, 2130, 2131, 2132, 2133]
+
 # This fixed gameplay relationship is not represented as a direct SDE table.
 PLANET_RESOURCES = {
     "barren": ["Aqueous Liquids", "Base Metals", "Carbon Compounds", "Micro Organisms", "Noble Metals"],
@@ -114,12 +126,28 @@ def main() -> None:
 
         schematics = list(rows(archive, "planetSchematics.jsonl"))
         material_ids = {entry["_key"] for schematic in schematics for entry in schematic.get("types", [])}
-        wanted_type_ids = material_ids | set(PLANET_TYPE_IDS)
+        wanted_type_ids = material_ids | set(PLANET_TYPE_IDS) | set(STRUCTURE_TYPE_IDS.values()) | set(COMMAND_CENTER_LEVEL_TYPE_IDS)
         type_names = {}
+        type_details = {}
         for row in rows(archive, "types.jsonl"):
             type_id = row["_key"]
             if type_id in wanted_type_ids:
                 type_names[type_id] = english(row.get("name", {}))
+                type_details[type_id] = {
+                    "typeId": type_id,
+                    "name": english(row.get("name", {})),
+                    "basePrice": row.get("basePrice", 0),
+                    "capacity": row.get("capacity", 0),
+                }
+
+        dogma_by_type = {}
+        fitting_type_ids = set(STRUCTURE_TYPE_IDS.values()) | set(COMMAND_CENTER_LEVEL_TYPE_IDS)
+        for row in rows(archive, "typeDogma.jsonl"):
+            if row["_key"] in fitting_type_ids:
+                dogma_by_type[row["_key"]] = {
+                    attribute["attributeID"]: attribute["value"]
+                    for attribute in row.get("dogmaAttributes", [])
+                }
 
     recipes = {}
     for schematic in schematics:
@@ -184,6 +212,42 @@ def main() -> None:
         for type_id, (slug, name, color) in PLANET_TYPE_IDS.items()
     ]
 
+    structures = {
+        "source": "CCP SDE types.jsonl and typeDogma.jsonl",
+        "attributes": {
+            "powerOutput": 11,
+            "cpuOutput": 48,
+            "powerUse": 15,
+            "cpuUse": 49,
+            "ecuHeadCpuUse": 1690,
+            "ecuHeadPowerUse": 1691,
+        },
+        "commandCenterLevels": [
+            {
+                "level": level,
+                "label": ["Basic", "Limited", "Standard", "Improved", "Advanced", "Elite"][level],
+                "typeId": type_id,
+                "power": int(dogma_by_type[type_id][11]),
+                "cpu": int(dogma_by_type[type_id][48]),
+            }
+            for level, type_id in enumerate(COMMAND_CENTER_LEVEL_TYPE_IDS)
+        ],
+        "items": {},
+    }
+    for key, type_id in STRUCTURE_TYPE_IDS.items():
+        if key == "commandCenter":
+            continue
+        details = type_details[type_id]
+        dogma = dogma_by_type[type_id]
+        structures["items"][key] = {
+            **details,
+            "power": int(dogma.get(15, 0)),
+            "cpu": int(dogma.get(49, 0)),
+        }
+        if key == "ecu":
+            structures["items"][key]["headPower"] = int(dogma.get(1691, 0))
+            structures["items"][key]["headCpu"] = int(dogma.get(1690, 0))
+
     systems = []
     restricted_names = set()
     for system in sorted(systems_by_id.values(), key=lambda item: item["name"].casefold()):
@@ -201,7 +265,7 @@ def main() -> None:
         })
 
     metadata = {
-        "version": "0.5.0",
+        "version": "0.6.0",
         "source": "CCP EVE Online Static Data Export (JSONL)",
         "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
         "sdeBuild": str(args.build),
@@ -216,9 +280,11 @@ def main() -> None:
             "products": len(products),
             "schematics": len(schematics),
             "restrictedSystems": len(restricted_names),
+            "structureArchetypes": len(structures["items"]),
         },
         "notes": [
             "System, region, security, planet, stargate, item and schematic records come from CCP's SDE.",
+            "Command-center outputs and planetary structure CPU, powergrid, capacity and base-price records come from CCP typeDogma and type data.",
             "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
             "Named restrictions and shattered-system IDs are explicit and data-driven.",
         ],
@@ -230,6 +296,7 @@ def main() -> None:
         "restrictedSystems": sorted(restricted_names),
         "planets": planets,
         "products": products,
+        "structures": structures,
         "systems": systems,
     }
 
@@ -240,6 +307,8 @@ def main() -> None:
     (generated / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (generated / "systems.json").write_text(json.dumps(systems, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     (generated / "pi-products.json").write_text(json.dumps(products, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (generated / "structures.json").write_text(json.dumps(structures, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (root / "data" / "structures.json").write_text(json.dumps(structures, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(metadata["counts"], indent=2))
 
 
