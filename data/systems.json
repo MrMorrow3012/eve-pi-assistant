@@ -1,5 +1,7 @@
 {
-  "_status": "prototype placeholder",
-  "_source": null,
-  "items": []
+  "schema_version": 1,
+  "status": "prototype_placeholder",
+  "future_source": ["CCP SDE solar systems and stargates", "ESI universe endpoints"],
+  "fields": ["system_id", "name", "region_id", "security", "planet_counts", "neighbors", "pi_restricted"],
+  "sample_systems": ["Jita", "Perimeter", "New Caldari", "Urlen", "Maurasi", "Sobaseki"]
 }

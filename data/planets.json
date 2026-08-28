@@ -1,5 +1,7 @@
 {
-  "_status": "prototype placeholder",
-  "_source": null,
-  "items": []
+  "schema_version": 1,
+  "status": "prototype_placeholder",
+  "future_source": ["CCP SDE planet types", "ESI universe system and planet endpoints"],
+  "planet_types": ["Barren", "Gas", "Ice", "Lava", "Oceanic", "Plasma", "Storm", "Temperate"],
+  "fields": ["planet_id", "system_id", "name", "type_id", "type_name", "radius"]
 }

@@ -1,5 +1,7 @@
 {
-  "_status": "prototype placeholder",
-  "_source": null,
-  "items": []
+  "schema_version": 1,
+  "status": "prototype_placeholder",
+  "future_source": ["CCP SDE inventory types", "CCP SDE planet schematics"],
+  "tiers": ["P0", "P1", "P2", "P3", "P4"],
+  "fields": ["type_id", "name", "tier", "input_type_ids", "output_quantity", "cycle_time"]
 }

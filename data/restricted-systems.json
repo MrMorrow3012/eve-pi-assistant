@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "status": "curated_placeholder_requiring_verification",
+  "note": "Keep restrictions data-driven; do not infer eligibility from planets.",
+  "systems": ["Amarr", "Arnon", "Aunia", "Auvergne", "Balginia", "Dodixie", "Fricoure", "Ichoriya", "Irjunen", "Isaziwa", "Isinokka", "Jita", "Lustrevik", "Motsu", "Oursulaert", "Rens", "Sankkasen", "Umokka"]
+}

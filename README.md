@@ -2,7 +2,7 @@
 
 A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 
-## Prototype 0.1
+## Prototype 0.2
 - Dark EVE-style UI
 - Persistent navigation
 - Operations dashboard
@@ -10,6 +10,10 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Planet Explorer
 - Resource Analysis
 - Production Planner
+- Production Browser / Planet Finder
+- Clickable planet types and P0-P4 browsing
+- Home-system and max-jumps controls
+- Nearby-system comparison and restricted-system handling
 - Colony Designer placeholder
 - Logistics, Profit, and Risk sections
 - PI Setup Wizard
@@ -18,7 +22,9 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 > Current values are illustrative prototype data only.
 
 ## Running
-Open `web/index.html`.
+Open `web/index.html`, then choose **Production Browser**.
+
+The browser uses structured local sample data so it works directly from GitHub Pages. Nearby-system routes, planet composition, product coverage, and fit scores are illustrative placeholders—not live deployment recommendations. The schemas in `data/` and the browser dataset in `web/data/` are ready to be replaced by an SDE/ESI generation pipeline.
 
 ## Roadmap
 1. Verify PI mechanics
