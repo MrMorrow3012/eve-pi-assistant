@@ -26,11 +26,11 @@ Use the SDE generation pipeline for:
 
 Generated browser data should retain CCP IDs so a selected record can be refreshed or supplemented through ESI.
 
-## Character-private data — EVE login required
+## Character-private data — intentionally out of scope
 
-Existing colonies and other private character information require EVE SSO and the exact scopes listed for the relevant operation in CCP's current API Explorer. Authorization Code with PKCE is the appropriate OAuth pattern for a browser-based client that cannot safely contain a client secret.
+The current product decision is to operate without character login. Existing colonies and other private character information will not be requested. This avoids asking players to authorize a planning tool and keeps the GitHub Pages application useful without an account connection.
 
-Do not commit client secrets, access tokens, or refresh tokens to GitHub. Before enabling login, register the application and callback URL in the EVE Developers Portal, verify `state`, validate returned JWTs, request only necessary scopes, and decide whether tokens will be session-only or managed by a small backend.
+Do not add client secrets, access tokens, refresh tokens, or authenticated ESI scopes to this repository. If login is reconsidered in the future, it must be a separate, explicit security-design milestone rather than a requirement for the planner.
 
 ## Operational rules
 
@@ -47,4 +47,4 @@ Do not commit client secrets, access tokens, or refresh tokens to GitHub. Before
 2. Enable public name resolution and selected-system refresh through ESI.
 3. Add local breadth-first jump search using the generated stargate graph.
 4. Add route preference and hauling analysis using `POST /route` when appropriate.
-5. Register the EVE application and add optional SSO/PKCE character import.
+5. Continue improving the unauthenticated workflow; character import remains out of scope.

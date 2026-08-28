@@ -2,7 +2,7 @@
 
 A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 
-## Prototype 0.3
+## Prototype 0.4
 - Dark EVE-style UI
 - Persistent navigation
 - Operations dashboard
@@ -16,6 +16,7 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Nearby-system comparison and restricted-system handling
 - System Analysis with eligibility, planet composition, production coverage, system fit, and next-step handoff
 - Public ESI browser adapter and documented SDE/ESI/SSO integration plan
+- No-login Colony Planner with planet selection, product goals, role assignment, starter layouts, coverage, and readiness checks
 - Colony Designer placeholder
 - Logistics, Profit, and Risk sections
 - PI Setup Wizard
@@ -28,7 +29,7 @@ Open `web/index.html`, then choose **Production Browser**.
 
 The browser uses structured local sample data so it works directly from GitHub Pages. Nearby-system routes, planet composition, product coverage, and fit scores are illustrative placeholders—not live deployment recommendations. The schemas in `data/` and the browser dataset in `web/data/` are ready to be replaced by an SDE/ESI generation pipeline.
 
-See `docs/esi-integration.md` for the staged plan covering public ESI requests, SDE generation, route calculation, caching, and optional EVE SSO character import.
+See `docs/esi-integration.md` for the staged plan covering public ESI requests, SDE generation, route calculation, and caching. Character login and private ESI data are intentionally out of scope.
 
 ## Roadmap
 1. Verify PI mechanics
