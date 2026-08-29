@@ -1,16 +1,16 @@
 # EVE PI Assistant
 
-## Logistics & POCO Planning v0.8
+## Market Profitability v0.9
 
 The site ships with a generated public-data bundle from CCP's JSONL Static Data Export: 8,490 solar systems, region and security data, 67,693 individual planets with IDs and radii, 6,989 static stargate links, the complete P0–P4 schematic graph, commodity volumes, and verified planetary structure fitting attributes. Autocomplete covers New Eden, nearby searches use the real gate graph, and PI restrictions include the 18 named systems plus shattered wormholes.
 
-No character login, OAuth token, backend, or application secret is required. Public ESI remains an optional supplement for current system lookups and occasional route checks.
+No character login, OAuth token, backend, or application secret is required. Public ESI supplies optional regional market orders and route checks; every price can also be entered manually.
 
 See `docs/data-foundation.md` for the refresh process.
 
 A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 
-## Included in v0.8
+## Included in v0.9
 - Dark EVE-style UI
 - Persistent navigation
 - Operations dashboard
@@ -45,6 +45,14 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Optional public ESI route comparison with shorter, safer, and less-secure preferences
 - Generated collection checklist for extraction, customs transfers, factory imports, and hauling
 - Per-collection customs, hauling, and combined cost summary
+- Market Profitability page driven by the selected colony and logistics plan
+- Public regional ESI best-buy and best-sell prices, requested only for selected products
+- Five-minute browser cache and batched same-tier requests to respect ESI limits
+- Manual buy and sell price fallback for offline use or local market assumptions
+- Instant-sale and listed-sale modes with editable broker fee and sales tax
+- Locally produced or market-purchased direct-input costing
+- Gross revenue, recurring costs, net per collection/day/hour/unit, margin, and break-even price
+- Profit waterfall, missing-price guidance, and P1–P4 same-tier product ranking
 - Public ESI browser adapter and documented SDE/ESI/SSO integration plan
 - No-login Colony Planner with product goals, automated planet selection, editable roles, starter layouts, coverage, and readiness checks
 - Colony Designer placeholder
@@ -52,21 +60,20 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - PI Setup Wizard
 - PI Guide shell
 
-> System, individual planet, route, product, schematic, volume, CPU, and powergrid records are sourced from CCP's SDE. Layout link costs and POCO costs remain planning estimates: players must enter the rate shown by the in-game Customs Office and confirm transfer quotes before committing. Resource abundance and market prices are not yet calculated.
+> System, individual planet, route, product, schematic, volume, CPU, and powergrid records are sourced from CCP's SDE. Current regional order prices come from public ESI or manual entry. Layout link costs, POCO costs, extraction yield, order execution, and hauling assumptions remain estimates that must be checked in game.
 
 ## Running
 Open `web/index.html`, then choose **Production Help**.
 
 The generated browser bundle works directly from GitHub Pages or a local file. Regenerate it from a future CCP SDE with `src/data/build_sde_data.py`.
 
-See `docs/esi-integration.md` for the staged plan covering public ESI requests, SDE generation, route calculation, and caching. Character login and private ESI data are intentionally out of scope.
+See `docs/esi-integration.md` for the public ESI boundary, regional price requests, route calculation, and caching. Character login and private ESI data are intentionally out of scope.
 
 ## Roadmap
-1. Add market profitability using public regional prices or imported prices
-2. Carry POCO and hauling costs into net profit per hour, day, and collection
-3. Add break-even prices and product comparison
-4. Improve factory allocation and allow manual processor-count adjustments
-5. Add saved local plans without character login
-6. Publish updates through GitHub Pages
+1. Add risk and effort scoring using security, route exposure, collection rhythm, and user preferences
+2. Improve factory allocation and allow manual processor-count adjustments
+3. Add saved local plans plus JSON export/import without character login
+4. Add optional public activity context without collecting character data
+5. Publish updates through GitHub Pages
 
 EVE Online and related intellectual property belong to CCP Games.

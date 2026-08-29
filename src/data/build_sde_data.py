@@ -275,7 +275,7 @@ def main() -> None:
         })
 
     metadata = {
-        "version": "0.8.0",
+        "version": "0.9.0",
         "source": "CCP EVE Online Static Data Export (JSONL)",
         "sourceUrl": "https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip",
         "sdeBuild": str(args.build),
@@ -299,6 +299,7 @@ def main() -> None:
             "Command-center outputs and planetary structure CPU, powergrid, capacity and base-price records come from CCP typeDogma and type data.",
             "Planet-to-resource availability is versioned locally because the SDE does not expose it as a direct table.",
             "Named restrictions and shattered-system IDs are explicit and data-driven.",
+            "Current regional market orders are requested from public ESI at runtime and are not baked into the SDE bundle.",
         ],
     }
 

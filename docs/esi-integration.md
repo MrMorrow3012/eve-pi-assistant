@@ -9,9 +9,12 @@ The GitHub Pages client can use public ESI operations for:
 - resolving a typed system name to its EVE ID;
 - retrieving system metadata and planet IDs;
 - retrieving individual planet metadata; and
-- calculating an occasional route between a home and candidate system.
+- calculating an occasional route between a home and candidate system; and
+- retrieving current buy and sell orders for specific PI product types in a selected region.
 
-`web/esi.js` provides the browser adapter. It sends `X-Compatibility-Date` and `X-User-Agent` headers and keeps a small in-memory cache. v0.8 uses it only when the player explicitly requests a public route comparison; the static SDE route remains the default.
+`web/esi.js` provides the browser adapter. It sends `X-Compatibility-Date` and `X-User-Agent` headers and keeps a five-minute in-memory cache. v0.9 uses it only after the player explicitly requests a public route comparison, selected production-chain prices, or same-tier product prices. The static SDE route and manual price inputs remain available without ESI.
+
+Market requests use `GET /markets/{region_id}/orders` with a specific `type_id`; the website does not download every order page in a region. Same-tier requests are sent in small batches. Best regional buy and sell values are planning references, not guaranteed transaction prices or station-local quotes.
 
 For a large “all systems within N jumps” search, generate the stargate graph from the SDE and run breadth-first search locally. Calling ESI once for every candidate route would be unnecessarily slow and waste CCP resources.
 
@@ -46,5 +49,6 @@ Do not add client secrets, access tokens, refresh tokens, or authenticated ESI s
 1. Generate verified universe and PI datasets from the SDE. **Complete**
 2. Add local breadth-first jump search using the generated stargate graph. **Complete**
 3. Add optional route preference and hauling comparison using `POST /route/{origin}/{destination}`. **Complete**
-4. Add public market-price retrieval with cache-aware behavior.
-5. Continue improving the unauthenticated workflow; character import remains out of scope.
+4. Add public regional market-price retrieval with cache-aware behavior. **Complete**
+5. Carry public or manual prices into fees, recurring costs, net returns, break-even values, and tier comparison. **Complete**
+6. Continue improving the unauthenticated workflow; character import remains out of scope.

@@ -14,7 +14,7 @@ globalThis.document={
 vm.runInThisContext(fs.readFileSync(new URL("../web/data/pi-data.js",import.meta.url),"utf8"));
 vm.runInThisContext(fs.readFileSync(new URL("../web/app.js",import.meta.url),"utf8"));
 
-assert.equal(piData.metadata.version,"0.8.0");
+assert.equal(piData.metadata.version,"0.9.0");
 assert.equal(piData.metadata.counts.systems,8490);
 assert.equal(matchingSystems("Atlan")[0],"Atlangeins");
 assert.equal(getSystem("Jita").restricted,true);
@@ -93,6 +93,36 @@ assert.match(pageContent.innerHTML,/STATIC GATE ROUTE/);
 assert.match(pageContent.innerHTML,/PUBLIC ESI ROUTE CHECK/);
 assert.match(pageContent.innerHTML,/COLLECTION CHECKLIST/);
 
+const snapshot=marketSnapshot([
+  {is_buy_order:true,price:9200,volume_remain:80},
+  {is_buy_order:true,price:9800,volume_remain:25},
+  {is_buy_order:false,price:11200,volume_remain:40},
+  {is_buy_order:false,price:10800,volume_remain:60},
+]);
+assert.equal(snapshot.buy,9800);
+assert.equal(snapshot.sell,10800);
+assert.equal(snapshot.buyVolume,105);
+assert.equal(snapshot.sellVolume,100);
+
+state.market.prices[product.typeId]={buy:10000,sell:11000,source:"manual"};
+let profit=profitabilityModel();
+assert.equal(profit.ready,true);
+assert.ok(profit.gross>0);
+assert.ok(profit.breakEven>0);
+assert.equal(typeof profit.net,"number");
+state.market.sourcing="market";
+for(const item of product.inputItems)state.market.prices[item.typeId]={buy:1000,sell:1200,source:"manual"};
+profit=profitabilityModel();
+assert.equal(profit.ready,true);
+assert.ok(profit.inputCost>0);
+state.market.sourcing="local";
+state.page="profit";
+render();
+assert.match(pageContent.innerHTML,/Market Profitability/);
+assert.match(pageContent.innerHTML,/BREAK-EVEN/);
+assert.match(pageContent.innerHTML,/PROFIT WATERFALL/);
+assert.match(pageContent.innerHTML,/PUBLIC MARKET DATA/);
+
 for(const tier of [1,2,3,4]){
   let representative=null;
   for(const tierProduct of piData.products.filter(item=>item.tier===tier)){
@@ -109,9 +139,13 @@ for(const tier of [1,2,3,4]){
   const tierLogistics=logisticsModel();
   assert.ok(tierLogistics.totalVolume>0,`P${tier} should create cargo volume`);
   assert.equal(tierLogistics.movements.length,tier===1?1:1+representative.tierProduct.inputItems.length);
+  state.market.prices[representative.tierProduct.typeId]={buy:10000*tier,sell:11000*tier,source:"manual"};
+  const tierProfit=profitabilityModel();
+  assert.equal(tierProfit.ready,true,`P${tier} should calculate profit with a manual output price`);
+  assert.ok(tierProfit.breakEven>=0,`P${tier} should calculate break-even price`);
   state.page="layout";
   render();
   assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 }
 
-console.log("v0.8 smoke checks passed");
+console.log("v0.9 smoke checks passed");
