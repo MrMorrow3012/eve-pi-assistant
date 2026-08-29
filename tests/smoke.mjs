@@ -104,15 +104,18 @@ assert.equal(snapshot.buy,9800);
 assert.equal(snapshot.sell,10800);
 assert.equal(snapshot.buyVolume,105);
 assert.equal(snapshot.sellVolume,100);
+assert.deepEqual(snapshot.buyOptions.map(level=>level.price),[9800,9200]);
+assert.deepEqual(snapshot.sellOptions.map(level=>level.price),[10800,11200]);
+assert.equal(compactUnits(84400),"84.4k units");
 
-state.market.prices[product.typeId]={buy:10000,sell:11000,source:"manual"};
+state.market.prices[product.typeId]={buy:10000,sell:11000,buyOptions:[{price:10000,volume:5000},{price:9900,volume:7500}],sellOptions:[{price:11000,volume:4000},{price:11200,volume:6000}],source:"CCP ESI"};
 let profit=profitabilityModel();
 assert.equal(profit.ready,true);
 assert.ok(profit.gross>0);
 assert.ok(profit.breakEven>0);
 assert.equal(typeof profit.net,"number");
 state.market.sourcing="market";
-for(const item of product.inputItems)state.market.prices[item.typeId]={buy:1000,sell:1200,source:"manual"};
+for(const item of product.inputItems)state.market.prices[item.typeId]={buy:1000,sell:1200,source:"CCP ESI"};
 profit=profitabilityModel();
 assert.equal(profit.ready,true);
 assert.ok(profit.inputCost>0);
@@ -123,6 +126,9 @@ assert.match(pageContent.innerHTML,/Market Profitability/);
 assert.match(pageContent.innerHTML,/BREAK-EVEN/);
 assert.match(pageContent.innerHTML,/PROFIT WATERFALL/);
 assert.match(pageContent.innerHTML,/PUBLIC MARKET DATA/);
+assert.match(pageContent.innerHTML,/data-market-choice/);
+assert.match(pageContent.innerHTML,/best 5 price levels/);
+assert.doesNotMatch(pageContent.innerHTML,/data-market-price/);
 
 for(const tier of [1,2,3,4]){
   let representative=null;
@@ -140,9 +146,9 @@ for(const tier of [1,2,3,4]){
   const tierLogistics=logisticsModel();
   assert.ok(tierLogistics.totalVolume>0,`P${tier} should create cargo volume`);
   assert.equal(tierLogistics.movements.length,tier===1?1:1+representative.tierProduct.inputItems.length);
-  state.market.prices[representative.tierProduct.typeId]={buy:10000*tier,sell:11000*tier,source:"manual"};
+  state.market.prices[representative.tierProduct.typeId]={buy:10000*tier,sell:11000*tier,source:"CCP ESI"};
   const tierProfit=profitabilityModel();
-  assert.equal(tierProfit.ready,true,`P${tier} should calculate profit with a manual output price`);
+  assert.equal(tierProfit.ready,true,`P${tier} should calculate profit with a seeded ESI output price`);
   assert.ok(tierProfit.breakEven>=0,`P${tier} should calculate break-even price`);
   state.page="layout";
   render();

@@ -12,7 +12,7 @@ The GitHub Pages client can use public ESI operations for:
 - calculating an occasional route between a home and candidate system; and
 - retrieving current buy and sell orders for specific PI product types in a selected region.
 
-`web/esi.js` provides the browser adapter. It sends `X-Compatibility-Date` and `X-User-Agent` headers and keeps a five-minute in-memory cache. v0.9 uses it only after the player explicitly requests a public route comparison, selected production-chain prices, or same-tier product prices. The static SDE route and manual price inputs remain available without ESI.
+`web/esi.js` provides the browser adapter. It sends `X-Compatibility-Date` and `X-User-Agent` headers and keeps a five-minute in-memory cache. v0.9 uses it only after the player explicitly requests a public route comparison, selected production-chain prices, or same-tier product prices. The static SDE route remains available without ESI.
 
 The current `POST /route/{origin}/{destination}` response wraps the system-ID list in a `route` field. The adapter normalizes that response before the UI compares it with the offline SDE route. The comparison does not set an in-game autopilot destination and does not include traffic or gate-camp activity.
 
@@ -52,5 +52,5 @@ Do not add client secrets, access tokens, refresh tokens, or authenticated ESI s
 2. Add local breadth-first jump search using the generated stargate graph. **Complete**
 3. Add optional route preference and hauling comparison using `POST /route/{origin}/{destination}`. **Complete**
 4. Add public regional market-price retrieval with cache-aware behavior. **Complete**
-5. Carry public or manual prices into fees, recurring costs, net returns, break-even values, and tier comparison. **Complete**
+5. Carry selected public order levels into fees, recurring costs, net returns, break-even values, and tier comparison. **Complete**
 6. Continue improving the unauthenticated workflow; character import remains out of scope.

@@ -16,7 +16,7 @@ The layout planner uses each selected planet's SDE radius as a reference and cal
 
 The logistics planner combines SDE commodity volume and static gate data with player-entered POCO, utilization, cargo, and hauling assumptions. The tax-value table is maintained as a visible local planning rule rather than presented as SDE or ESI data. The current in-game transfer quote remains authoritative.
 
-The profitability planner requests current orders only for the selected output and its direct inputs, or for one explicitly requested product tier. It calculates the best regional buy and sell references, caches them for five minutes, and supports manual replacement values. Current prices are intentionally not generated into `pi-data.js`: the SDE supplies stable product identities and schematics, while public ESI or the player supplies the time-sensitive price layer.
+The profitability planner requests current orders only for the selected output and its direct inputs, or for one explicitly requested product tier. It groups orders by price, exposes the five best buy and sell levels with their remaining volume, and caches them for five minutes. Current prices are intentionally not generated into `pi-data.js`: the SDE supplies stable product identities and schematics, while public ESI supplies the time-sensitive price layer.
 
 Profit outputs carry forward the selected plan's processor count, collection rhythm, utilization, POCO estimate, cargo route, and hauling allowance. They remain decision-support estimates because resource abundance, order depth and execution, installation costs, and the player's real in-game tax skills are not available from the static dataset.
 

@@ -5,7 +5,7 @@ The Profit page starts with a completed colony plan and carries forward its fina
 ## Price sources
 
 - **Public ESI:** the player chooses a market region and explicitly loads the selected chain or its product tier. Requests are filtered to one item type at a time and cached for five minutes.
-- **Manual:** every best-buy and best-sell field can be entered or replaced directly. This is the offline fallback and also supports station-local or negotiated prices.
+- **Price level selection:** each product shows the five highest regional buy levels and five lowest regional sell levels, with the remaining order volume at each price. The best level is selected automatically, and the player can choose another real order level from the dropdown.
 
 An instant sale uses the highest regional buy order. A listed sale uses the lowest regional sell order and applies both the entered broker fee and sales tax. ESI prices are regional references; they do not guarantee that enough volume exists at one station or that the order will still be available when the player arrives.
 

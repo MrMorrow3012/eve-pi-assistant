@@ -4,7 +4,7 @@
 
 The site ships with a generated public-data bundle from CCP's JSONL Static Data Export: 8,490 solar systems, region and security data, 67,693 individual planets with IDs and radii, 6,989 static stargate links, the complete P0–P4 schematic graph, commodity volumes, and verified planetary structure fitting attributes. Autocomplete covers New Eden, nearby searches use the real gate graph, and PI restrictions include the 18 named systems plus shattered wormholes.
 
-No character login, OAuth token, backend, or application secret is required. Public ESI supplies optional regional market orders and route checks; every price can also be entered manually.
+No character login, OAuth token, backend, or application secret is required. Public ESI supplies optional regional market orders and route checks.
 
 See `docs/data-foundation.md` for the refresh process.
 
@@ -48,7 +48,7 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Market Profitability page driven by the selected colony and logistics plan
 - Public regional ESI best-buy and best-sell prices, requested only for selected products
 - Five-minute browser cache and batched same-tier requests to respect ESI limits
-- Manual buy and sell price fallback for offline use or local market assumptions
+- Readable selectors for the five best regional buy and sell price levels, including available volume
 - Instant-sale and listed-sale modes with editable broker fee and sales tax
 - Locally produced or market-purchased direct-input costing
 - Gross revenue, recurring costs, net per collection/day/hour/unit, margin, and break-even price
@@ -60,7 +60,7 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - PI Setup Wizard
 - PI Guide shell
 
-> System, individual planet, route, product, schematic, volume, CPU, and powergrid records are sourced from CCP's SDE. Current regional order prices come from public ESI or manual entry. Layout link costs, POCO costs, extraction yield, order execution, and hauling assumptions remain estimates that must be checked in game.
+> System, individual planet, route, product, schematic, volume, CPU, and powergrid records are sourced from CCP's SDE. Current regional order prices come from public ESI. Layout link costs, POCO costs, extraction yield, order execution, and hauling assumptions remain estimates that must be checked in game.
 
 ## Running
 Open `web/index.html`, then choose **Production Help**.
