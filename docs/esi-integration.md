@@ -14,6 +14,8 @@ The GitHub Pages client can use public ESI operations for:
 
 `web/esi.js` provides the browser adapter. It sends `X-Compatibility-Date` and `X-User-Agent` headers and keeps a five-minute in-memory cache. v0.9 uses it only after the player explicitly requests a public route comparison, selected production-chain prices, or same-tier product prices. The static SDE route and manual price inputs remain available without ESI.
 
+The current `POST /route/{origin}/{destination}` response wraps the system-ID list in a `route` field. The adapter normalizes that response before the UI compares it with the offline SDE route. The comparison does not set an in-game autopilot destination and does not include traffic or gate-camp activity.
+
 Market requests use `GET /markets/{region_id}/orders` with a specific `type_id`; the website does not download every order page in a region. Same-tier requests are sent in small batches. Best regional buy and sell values are planning references, not guaranteed transaction prices or station-local quotes.
 
 For a large “all systems within N jumps” search, generate the stargate graph from the SDE and run breadth-first search locally. Calling ESI once for every candidate route would be unnecessarily slow and waste CCP resources.

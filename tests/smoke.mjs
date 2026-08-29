@@ -90,7 +90,8 @@ render();
 assert.match(pageContent.innerHTML,/Logistics & POCO Planner/);
 assert.match(pageContent.innerHTML,/CARGO & CUSTOMS MOVEMENTS/);
 assert.match(pageContent.innerHTML,/STATIC GATE ROUTE/);
-assert.match(pageContent.innerHTML,/PUBLIC ESI ROUTE CHECK/);
+assert.match(pageContent.innerHTML,/OPTIONAL CCP ROUTE COMPARISON/);
+assert.match(pageContent.innerHTML,/CHECK CCP ROUTE/);
 assert.match(pageContent.innerHTML,/COLLECTION CHECKLIST/);
 
 const snapshot=marketSnapshot([
@@ -147,5 +148,15 @@ for(const tier of [1,2,3,4]){
   render();
   assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 }
+
+let routeRequest=null;
+globalThis.fetch=async(url,options)=>{
+  routeRequest={url,options};
+  return {ok:true,json:async()=>({route:[30000138,30000142]})};
+};
+vm.runInThisContext(fs.readFileSync(new URL("../web/esi.js",import.meta.url),"utf8"));
+assert.deepEqual(await window.EVE_ESI.calculateRoute(30000138,30000142,"Shorter"),[30000138,30000142]);
+assert.equal(routeRequest.options.method,"POST");
+assert.deepEqual(JSON.parse(routeRequest.options.body),{preference:"Shorter",security_penalty:50});
 
 console.log("v0.9 smoke checks passed");

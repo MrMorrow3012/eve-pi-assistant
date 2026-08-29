@@ -29,7 +29,12 @@ window.EVE_ESI = (()=>{
     getMarketOrders:(regionId,typeId)=>request(`/markets/${regionId}/orders/?order_type=all&type_id=${typeId}`),
     getMarketHistory:(regionId,typeId)=>request(`/markets/${regionId}/history/?type_id=${typeId}`),
     resolveNames:names=>request("/universe/ids",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(names)}),
-    calculateRoute:(origin,destination,preference="Shorter")=>request(`/route/${origin}/${destination}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({preference})}),
+    calculateRoute:async(origin,destination,preference="Shorter")=>{
+      const data=await request(`/route/${origin}/${destination}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({preference,security_penalty:50})});
+      const route=Array.isArray(data)?data:data?.route;
+      if(!Array.isArray(route))throw new Error("CCP returned an unexpected route response");
+      return route;
+    },
     clearCache:()=>cache.clear()
   };
 })();
