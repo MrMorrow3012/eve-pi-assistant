@@ -25,6 +25,22 @@ assert.equal(distanceBetween("Jita","Perimeter"),1);
 assert.deepEqual(routeBetween("Jita","Perimeter").map(system=>system.name),["Jita","Perimeter"]);
 assert.equal(routeBetween("Jita","Thera").length,0);
 assert.match(pageContent.innerHTML,/CCP SDE/);
+assert.match(pageContent.innerHTML,/SET YOUR HOME SYSTEM/);
+assert.match(pageContent.innerHTML,/id="homeSystem"/);
+
+state.page="location";
+state.maxJumps=3;
+applySystemSearch("locationSystem","Atlangeins");
+assert.equal(state.locationSystem,"Atlangeins");
+assert.equal(state.selectedSystem,"Atlangeins");
+assert.equal(state.system,"Jita","exploring a location must not silently change the saved home");
+assert.match(pageContent.innerHTML,/value="Atlangeins"/);
+assert.match(pageContent.innerHTML,/REAL STARGATE RESULTS AROUND ATLANGEINS/);
+
+state.locationSystem=null;
+state.maxJumps=5;
+state.page="overview";
+render();
 
 state.page="productionHelp";
 render();

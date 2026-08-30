@@ -21,6 +21,8 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Production Browser / Planet Finder
 - Clickable planet types and P0-P4 browsing
 - Home-system and max-jumps controls
+- Overview home-system selector that establishes the planning and hauling anchor
+- Location autocomplete selections immediately recenter real nearby-system results while preserving the full Analyze System action
 - Nearby-system comparison and restricted-system handling
 - Complete New Eden system autocomplete, including Atlangeins
 - Real SDE stargate routing and planet composition
