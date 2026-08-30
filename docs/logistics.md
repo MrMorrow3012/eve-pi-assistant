@@ -7,3 +7,7 @@ Players can set the effective POCO export rate shown in game, expected processor
 The optional public ESI route check compares shorter, safer, or less-secure routing without character login. Static SDE routing remains the default and works offline.
 
 POCO rates and the local PI tax-value table are planning inputs rather than live SDE values. Verify transfer charges, ship capacity, and the actual route before moving material. v0.9 carries the resulting recurring cost total into Market Profitability.
+
+## Production rate validation
+
+The planner distinguishes the 100% final-factory ceiling from supportable output. In **Full chain produced locally** mode, it recursively expands the selected schematic, totals the basic and advanced facility-hours plus P0 required per final unit, and caps production at the slowest installed stage. An average P0 yield per ECU per hour must be entered from the in-game extraction program; the website does not invent an extraction rate. In **Buy/import final-stage inputs** mode, those upstream stages are external and the selected final facilities determine the rate after expected uptime.

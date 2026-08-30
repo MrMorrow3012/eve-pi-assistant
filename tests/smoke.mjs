@@ -92,7 +92,23 @@ assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 assert.match(pageContent.innerHTML,/BEGINNER BUILD ORDER/);
 assert.match(pageContent.innerHTML,/OPERATION-WIDE PRODUCTION BALANCE/);
 
+const unverifiedLogistics=logisticsModel();
+assert.equal(unverifiedLogistics.throughput.ready,false);
+assert.equal(unverifiedLogistics.finalUnits,0,"local-chain output must stay unavailable until a P0 rate is supplied");
+state.market.prices[product.typeId]={buy:999999,sell:999999,source:"CCP ESI"};
+assert.equal(profitabilityModel().gross,null,"a market price must not create income from an unsupported production rate");
+delete state.market.prices[product.typeId];
+state.page="logistics";
+render();
+assert.match(pageContent.innerHTML,/PRODUCTION RATE VALIDATION/);
+assert.match(pageContent.innerHTML,/RATE REQUIRED/);
+assert.match(pageContent.innerHTML,/id="logP0Yield"/);
+state.logistics.p0Yield=24000;
 const logistics=logisticsModel();
+assert.equal(logistics.throughput.ready,true);
+assert.ok(logistics.throughput.unitsPerHour<=logistics.throughput.theoreticalUnitsPerHour);
+assert.equal(logistics.throughput.bottleneck,"Basic processors");
+assert.ok(logistics.throughput.unitsPerHour<logistics.throughput.theoreticalUnitsPerHour,"local Mechanical Parts must be capped below the final-factory ceiling");
 assert.ok(logistics.finalUnits>0);
 assert.ok(logistics.totalVolume>0);
 assert.ok(logistics.totalTax>0);
@@ -109,6 +125,7 @@ assert.match(pageContent.innerHTML,/STATIC GATE ROUTE/);
 assert.match(pageContent.innerHTML,/OPTIONAL CCP ROUTE COMPARISON/);
 assert.match(pageContent.innerHTML,/CHECK CCP ROUTE/);
 assert.match(pageContent.innerHTML,/COLLECTION CHECKLIST/);
+assert.match(pageContent.innerHTML,/BOTTLENECK-LIMITED RATE/);
 
 const snapshot=marketSnapshot([
   {is_buy_order:true,price:9200,volume_remain:80},
@@ -142,6 +159,7 @@ assert.match(pageContent.innerHTML,/Market Profitability/);
 assert.match(pageContent.innerHTML,/BREAK-EVEN/);
 assert.match(pageContent.innerHTML,/PROFIT WATERFALL/);
 assert.match(pageContent.innerHTML,/PUBLIC MARKET DATA/);
+assert.match(pageContent.innerHTML,/VERIFIED OUTPUT RATE/);
 assert.match(pageContent.innerHTML,/data-market-choice/);
 assert.match(pageContent.innerHTML,/best 5 price levels/);
 assert.doesNotMatch(pageContent.innerHTML,/data-market-price/);
@@ -160,6 +178,8 @@ for(const tier of [1,2,3,4]){
   const first=planets[0],firstRole=state.colony.roles[first.id];
   assert.ok(layoutMetrics(first,firstRole,representative.tierProduct).links.length>0);
   const tierLogistics=logisticsModel();
+  assert.equal(tierLogistics.throughput.ready,true,`P${tier} should produce a supported rate after the P0 assumption is supplied`);
+  assert.ok(tierLogistics.throughput.unitsPerHour<=tierLogistics.throughput.theoreticalUnitsPerHour,`P${tier} sustainable output cannot exceed its factory ceiling`);
   assert.ok(tierLogistics.totalVolume>0,`P${tier} should create cargo volume`);
   assert.equal(tierLogistics.movements.length,tier===1?1:1+representative.tierProduct.inputItems.length);
   state.market.prices[representative.tierProduct.typeId]={buy:10000*tier,sell:11000*tier,source:"CCP ESI"};
@@ -189,6 +209,12 @@ render();
 assert.match(pageContent.innerHTML,/FINAL OUTPUT RULE/);
 assert.match(pageContent.innerHTML,/FINAL SALE OUTPUT/);
 assert.doesNotMatch(pageContent.innerHTML,/PURCHASED INPUT · COST ONLY/);
+assert.ok(terminalProfit.logistics.throughput.unitsPerHour<terminalProfit.logistics.throughput.theoreticalUnitsPerHour,"a full local P4 chain must be capped by its upstream production");
+state.market.sourcing="market";
+state.logistics.p0Yield=0;
+const suppliedFactory=logisticsModel();
+assert.equal(suppliedFactory.throughput.ready,true,"externally supplied final-stage inputs do not require a P0 estimate");
+assert.equal(suppliedFactory.throughput.unitsPerHour,suppliedFactory.throughput.theoreticalUnitsPerHour*state.logistics.utilization/100);
 
 let routeRequest=null;
 globalThis.fetch=async(url,options)=>{
@@ -200,4 +226,4 @@ assert.deepEqual(await window.EVE_ESI.calculateRoute(30000138,30000142,"Shorter"
 assert.equal(routeRequest.options.method,"POST");
 assert.deepEqual(JSON.parse(routeRequest.options.body),{preference:"Shorter",security_penalty:50});
 
-console.log("v0.9.5 smoke checks passed");
+console.log("v0.9.6 smoke checks passed");

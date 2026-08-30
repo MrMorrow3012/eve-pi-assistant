@@ -29,6 +29,8 @@ break-even unit price = (input purchases + logistics total)
 
 Only the selected end product is saleable revenue. For a P4 plan, P0, P1, P2, and P3 quantities are production stages consumed on the way to the P4 output; their market values are never added to gross revenue. If the player chooses to buy final-stage inputs, those prices appear only as costs.
 
+The daily result uses the sustainable output rate from Logistics, not the final factories' theoretical maximum. A locally produced chain recursively expands every schematic and compares final-facility, basic-processor, upstream advanced-processor, and P0 extraction capacity. The slowest stage caps final output. Because public data cannot know a player's extractor program, local-chain income remains unavailable until the player enters an average P0 yield per ECU per hour. When final-stage inputs are purchased or imported, the output rate is instead capped by the uptime-adjusted final-factory capacity.
+
 Net per day and hour divide the collection result by the selected maintenance rhythm. The same-tier comparison holds the current plan's final-processor count constant and compares locally produced outputs using final export tax and final-product hauling only.
 
 ## Boundaries

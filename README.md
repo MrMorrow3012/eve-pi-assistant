@@ -1,6 +1,6 @@
 # EVE PI Assistant
 
-## Market Profitability v0.9
+## Bottleneck-Limited Profitability v0.9.6
 
 The site ships with a generated public-data bundle from CCP's JSONL Static Data Export: 8,490 solar systems, region and security data, 67,693 individual planets with IDs and radii, 6,989 static stargate links, the complete P0–P4 schematic graph, commodity volumes, and verified planetary structure fitting attributes. Autocomplete covers New Eden, nearby searches use the real gate graph, and PI restrictions include the 18 named systems plus shattered wormholes.
 
@@ -55,6 +55,10 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Locally produced or market-purchased direct-input costing
 - Gross revenue, recurring costs, net per collection/day/hour/unit, margin, and break-even price
 - Terminal-output accounting: only the selected end product is revenue; every earlier P-tier is consumed or treated as an optional purchased-input cost
+- Bottleneck-limited production rates that recursively expand the complete P0–P4 chain
+- Separate full-local-chain and externally supplied factory modes
+- Required no-login P0 extraction-rate input before local-chain income is calculated
+- Factory ceiling, sustainable daily output, stage demand, and limiting stage shown separately
 - Profit waterfall, missing-price guidance, and P1–P4 same-tier product ranking
 - Public ESI browser adapter and documented SDE/ESI/SSO integration plan
 - No-login Colony Planner with product goals, automated planet selection, editable roles, starter layouts, coverage, and readiness checks
