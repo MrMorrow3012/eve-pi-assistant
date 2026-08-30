@@ -20,12 +20,14 @@ An instant sale uses the highest regional buy order. A listed sale uses the lowe
 For one collection period:
 
 ```text
-gross revenue = final units × selected output price
+gross revenue = selected final-product units × selected final-product price
 market fees = gross revenue × (sales tax + listed-sale broker fee)
 net profit = gross revenue - direct input purchases - market fees - logistics total
 break-even unit price = (input purchases + logistics total)
                         / (final units × (1 - effective market fee rate))
 ```
+
+Only the selected end product is saleable revenue. For a P4 plan, P0, P1, P2, and P3 quantities are production stages consumed on the way to the P4 output; their market values are never added to gross revenue. If the player chooses to buy final-stage inputs, those prices appear only as costs.
 
 Net per day and hour divide the collection result by the selected maintenance rhythm. The same-tier comparison holds the current plan's final-processor count constant and compares locally produced outputs using final export tax and final-product hauling only.
 

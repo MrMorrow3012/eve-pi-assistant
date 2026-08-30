@@ -54,6 +54,7 @@ A dark, EVE-inspired Planetary Industry planning and decision-support tool.
 - Instant-sale and listed-sale modes with editable broker fee and sales tax
 - Locally produced or market-purchased direct-input costing
 - Gross revenue, recurring costs, net per collection/day/hour/unit, margin, and break-even price
+- Terminal-output accounting: only the selected end product is revenue; every earlier P-tier is consumed or treated as an optional purchased-input cost
 - Profit waterfall, missing-price guidance, and P1–P4 same-tier product ranking
 - Public ESI browser adapter and documented SDE/ESI/SSO integration plan
 - No-login Colony Planner with product goals, automated planet selection, editable roles, starter layouts, coverage, and readiness checks

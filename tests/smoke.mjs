@@ -171,6 +171,25 @@ for(const tier of [1,2,3,4]){
   assert.match(pageContent.innerHTML,/MATERIAL ROUTING LEDGER/);
 }
 
+const terminalProduct=productById.get(state.colony.product);
+assert.equal(terminalProduct.tier,4,"terminal-output regression should exercise a P4 chain");
+state.market.sourcing="local";
+state.market.saleMode="instant";
+state.market.prices[terminalProduct.typeId]={buy:12345,sell:13000,source:"CCP ESI"};
+for(const intermediate of chainProducts(terminalProduct).slice(1)){
+  state.market.prices[intermediate.typeId]={buy:999999999,sell:999999999,source:"CCP ESI"};
+}
+const terminalProfit=profitabilityModel();
+assert.equal(terminalProfit.saleOutputs.length,1);
+assert.equal(terminalProfit.saleOutputs[0].product.typeId,terminalProduct.typeId);
+assert.equal(terminalProfit.gross,terminalProfit.logistics.finalUnits*12345,"P0-P3 market values must never be added to P4 revenue");
+assert.deepEqual(selectedMarketProducts().map(item=>item.typeId),[terminalProduct.typeId],"locally produced intermediate tiers should not appear as sale lines");
+state.page="profit";
+render();
+assert.match(pageContent.innerHTML,/FINAL OUTPUT RULE/);
+assert.match(pageContent.innerHTML,/FINAL SALE OUTPUT/);
+assert.doesNotMatch(pageContent.innerHTML,/PURCHASED INPUT · COST ONLY/);
+
 let routeRequest=null;
 globalThis.fetch=async(url,options)=>{
   routeRequest={url,options};
@@ -181,4 +200,4 @@ assert.deepEqual(await window.EVE_ESI.calculateRoute(30000138,30000142,"Shorter"
 assert.equal(routeRequest.options.method,"POST");
 assert.deepEqual(JSON.parse(routeRequest.options.body),{preference:"Shorter",security_penalty:50});
 
-console.log("v0.9 smoke checks passed");
+console.log("v0.9.5 smoke checks passed");
